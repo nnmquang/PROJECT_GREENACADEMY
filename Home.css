@@ -1,0 +1,138 @@
+/* Pop-UP-NHAHANGNGON */
+.popup-quickview {
+    position: fixed;
+    top: 100px;
+    left: 400px;
+    width: 300px;
+    z-index: 9;
+    background-color:khaki;
+    display: none;
+    border-radius: 20px;
+
+}
+.popup-quickview img {
+    width: 100%;
+    border-radius: 20px;
+}
+#btn-close {
+    font-size: 30px;
+    position: absolute;
+    right : 10px;
+    top: 0px;
+    color: white;
+    cursor: pointer;  /*lam ban tay khi kich vao X */
+}
+#list_item_nha_hang {
+    display: flex;
+    flex-wrap: wrap;
+}
+.focus_popup-quickview {
+    height: 0;
+    width: 0;
+    opacity: 0;             /* làm ẩn popup khi click chuột ra ngoài */
+}
+
+/* Pop-Up-TOPMONNGON */
+#list_item_mon_ngon {
+    display: flex;
+    flex-wrap: wrap;
+}
+.saleoff {
+    background-color: #f0ed3e;
+    color: rgb(241, 104, 63);
+    font-weight: bold;
+    padding: 4px 13px;
+    border: 2px dashed #f37067;
+    border-radius: 7px;
+    margin: 0 5px;
+    cursor: pointer;
+    width: 100px;
+    position: absolute;
+    top: 206px;
+  }
+.pop_up_mon_ngon {
+    position: fixed;
+    top : 200px;
+    left: 300px;
+    z-index: 99;
+    background: #fff;   
+    box-shadow: 5px 5px 5px rgb(240, 236, 29);
+    width: 500px;
+    display: none;
+    border-radius: 10px;
+}  
+.info_popup{
+    display: flex;
+    flex-wrap: wrap;
+}
+.image_popup img {
+    width: 200px;
+    border-radius: 10px;
+}
+.description {
+    margin-left: 20px;
+}
+.description .name {
+    font-size: 25px;
+    color: rgb(88, 85, 85);
+    font-weight: bold;
+}
+#btn-close-pop {
+    color: darkslategray;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    cursor: pointer;  /*lam ban tay khi kich vao X */
+}
+.sale_off {
+    width: 95px;
+    border-radius: 5px;
+}
+.price {
+    font-size: 30px;
+}
+.price span {
+    text-decoration: underline;
+}
+
+.form-control.input_search {
+    width: 114px;
+}
+
+/* Làm Menu sổ xuống Jquery */
+.item_menu_cuahang.have-child>.title_cuahang::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid #FFB30E;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    transition: ease all 0.5s;
+    position: absolute;
+    top: 34px;
+    right: 535px;
+}
+
+.list_cuahang {
+    position: absolute;
+    top: 55px;
+    min-width: 100px;
+    background: #343A40;
+    padding: 10px;
+    display: none;
+}
+.item_menu_cuahang.have-child.active>.title_cuahang:after {
+    transform: rotate(180deg);
+}
+
+/* .focus_listmenu {
+    height: 0;
+    width: 0;
+    opacity: 0; 
+} */

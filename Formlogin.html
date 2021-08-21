@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="style/Style.css">
+<!-- Latest compiled and minified CSS & JS -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--FontAwesome--> 
+<script src="http://kit.fontawesome.com/3f838e4efa.js" crossorigin="anonymous"></script>
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<!--Menu-->
+<div class="container-fluid" id="mainmenu"> </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <div class="container-fluid"> <a class="navbar-brand" href="#" id="tieude"><i class="fas fa-car-crash"></i><span style="color: #F17228">food</span>wagon</a>
+      <div id="button-menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="myNavbar">
+          <li class="nav-item active"> <a class="nav-link" href="#">Trang Chủ</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Dịch Vụ</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#/">Thực Đơn</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Chúng Tôi</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Đặc Biệt</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#"><i class="fas fa-store" style="color:darkorange"></i> Cửa Hàng</a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="far fa-address-book" style="color: darkorange"></i> Liên Lạc</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" id="drop">
+              <li><a class="dropdown-item" href="Contact/Contact-VN.html">Chi Nhánh 12</a></li>
+              <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+              <li><a class="dropdown-item" href="#">Chi Nhánh 14</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe" style="color: darkorange"></i> </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" id="drop1">
+              <li><a class="Flag-VN" href="Doan-VN.html"> <img src="image/vietnam.png"> Việt</a></li>
+              <li><a class="Flag-EN" href="../DOAN-EN/Doan.html"> <img src="image/england.png"> Anh</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Tìm món ăn" aria-label="Search">
+          <button class="btn btn-outline-warning " type="submit"><i class="fas fa-search"></i> Tìm Kiếm </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Formlogin -->
+<div class="container-fluid" id="login" style="padding-top: 100px;">
+<div class="col-sm-4" id="aboutContact3">
+    <h4 class="text-center">ĐĂNG NHẬP:</h4>
+    <label for="inputEmail4" class="form-label">Tên</label>
+    <input type="email" class="form-control" id="username">
+    <label for="inputEmail4" class="form-label">Mật Khẩu</label>
+    <input type="password" class="form-control" id="password">
+    <div id="contact-button" style="margin: 10px 0 10px 0;">
+        <button type="button" class="btn btn-dark btn-lg btn_login_submit" onclick="xu_ly_dang_nhap()" style="color:#FFB20E;">Gửi <i class="fas fa-long-arrow-alt-right"></i></button>
+        <div class="spinner-border text-primary " id="loading" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<!--Imagebottom-->
+<div class="container-fluid" id="imagebot1" style="background-image: url(image/Logo-3.jpg);">
+    <div class="text-imagebot">
+      <h1>Bạn Đã Sẵn Sàng Đặt Món Chưa !</h1>
+    </div>
+    <div class="buttom-image">
+      <button type="button" class="btn btn-danger">ĐẶT MÓN NGAY <i class="fas fa-chevron-right"></i> </button>
+    </div>
+  </div>
+  <!--footer-->
+  <div class="container-fluid" id="footer">
+    <div id="footer-main1">
+      <div class="col-12">
+        <h3 style="font-size: 20px">Chi Nhánh</h3>
+        <div class="row" id="footer1">
+          <div class="col-12 col-sm-3">
+            <p>Hồ Chí Minh</p>
+            <p>Hà Nội</p>
+            <p>Đà Nẵng</p>
+            <p>Cần Thơ</p>
+            <p>Nha Trang</p>
+          </div>
+          <div class="col-12 col-sm-3">
+            <p>Tiền Giang</p>
+            <p>Hậu Giang</p>
+            <p>Sóc Trăng</p>
+            <p>Bến Tre</p>
+            <p>Ninh Kiều</p>
+          </div>
+          <div class="col-12 col-sm-3">
+            <p>Quảng Nam</p>
+            <p>Quảng Ngãi</p>
+            <p>Bình Định</p>
+            <p>Phú Quốc</p>
+            <p>Cam Ranh</p>
+          </div>
+          <div class="col-12 col-sm-3">
+            <p>Đắc Lắc</p>
+            <p>Kon Tum</p>
+            <p>Sơn La</p>
+            <p>Cao Bằng</p>
+            <p>Lai Châu</p>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div style="height: 1px; background-color: #7E7E7E;"> </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-main2">
+      <div class="row">
+        <div class="col-12 col-sm-2">
+          <h3>Công Ty</h3>
+          <a  href="#">
+          <p>Về Chúng Tôi</p>
+          </a> <a  href="#">
+          <p>Đội Ngũ</p>
+          </a> <a  href="#">
+          <p>Cơ hội nghề nghiệp</p>
+          </a> <a  href="#">
+          <p>Blog</p>
+          </a> </div>
+        <div class="col-12 col-sm-2">
+          <h3>Liên Hệ</h3>
+          <a  href="#">
+          <p>Hỗ Trợ</p>
+          </a> <a  href="#">
+          <p>Đối Tác </p>
+          </a> <a  href="#">
+          <p>Bản Đồ</p>
+          </a> </div>
+        <div class="col-12 col-sm-2">
+          <h3>Chính Sách</h3>
+          <a  href="#">
+          <p>Điều khoản và điều kiện</p>
+          </a> <a  href="#">
+          <p>Hoàn tiền & Hủy</p>
+          </a> <a  href="#">
+          <p>Chính sách Cookie</p>
+          </a> </div>
+        <div class="col-12 col-sm-2">
+          <h3>Tin Tức</h3>
+          <a  href="#">
+          <p>Sự Kiện</p>
+          </a> <a  href="#">
+          <p>TV & Radio</p>
+          </a> <a  href="#">
+          <p>Xã Hội</p>
+          </a> </div>
+        <div class="col-12 col-sm-4" id="icon-main">
+          <h3>Theo Dõi Chúng Tôi</h3>
+          <div class="col-md-6 w3_agile_copy_right">
+            <ul class="info_social_icons">
+              <li><a href="#" class="facebook"><img src="image/facebook.png"></a></li>
+              <li><a href="#" class="twitter"><img src="image/Intergram.png"></a></li>
+              <li><a href="#" class="google"><img src="image/twiter.png"></a></li>
+            </ul>
+          </div>
+          <p>Nhận ưu đãi độc quyền trong hộp thư của bạn</p>
+          <form class="d-flex" id="search2">
+            <input class="form-control me-3" type="search" placeholder="Nhập Email của bạn" aria-label="Search">
+            <button class="btn btn-warning " type="submit" style="box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75); color: white"> Đăng Ký </button>
+          </form>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div style="height: 1px; background-color: #7E7E7E;"> </div>
+      </div>
+    </div>
+    <div id="footer-main3">
+      <div class="row">
+        <div class="col-md-6 copy_right">
+          <p>All rights Reserved &copy; Your Company, 2021</p>
+        </div>
+        <div class="col-md-6 copy_right" id="foot">
+          <p>Made with <i class="fas fa-heart" style="color: #E3B413"></i> by <a href="http://w3layouts.com/">QuangNguyen</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></scrip> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> 
+<script src="Formlogin.js"></script>       
+</body>
+</html>
