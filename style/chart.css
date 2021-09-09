@@ -1,0 +1,118 @@
+#search {
+    border-radius: 50px;
+    position: absolute;
+    width: 300px;
+    top: 8px;
+    right: 110px;
+}
+.info {
+    display: flex;
+    margin-left: 150px;
+}
+.info > div {
+    margin: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #4558be;
+}
+/* .mail {
+    font-size: 16px;
+}
+.fa-envelope:before {
+    content: "\f0e0";
+    padding: 20px;
+    font-size: 26px;
+    position: absolute;
+    top: 2px;
+    right: 163px;
+    cursor: pointer;
+    
+}
+.fa-bell:before {
+    right: 143px;
+    content: "\f0f3";
+    position: absolute;
+    font-size: 26px;
+    top: 23px;
+    cursor: pointer;
+}
+.fa-user:before {
+    right: 105px;
+    content: "\f0f3";
+    position: absolute;
+    font-size: 22px;
+    top: 23px;
+    cursor: pointer;
+} */
+#menu_main {
+    height: 60px;
+    background-color: #4558be;
+}
+.nav-item a {
+    color: white;
+    font-weight: bold;
+}
+.nav-nemu {
+    padding-top: 9px;
+}
+#text {
+    color: white;
+    padding-right: 70px;
+}
+
+#menu-ver {
+    position: fixed;
+    left: 0;
+    top: 121px;
+    z-index: 1;
+    width: 220px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 5px 5px 5px cornflowerblue;
+    display: none;
+}
+.oder {
+    width: 100%;
+}
+.order li {
+    padding: 10px 20px;
+    /* border-bottom:  1px solid #171818; */
+    width: 90%;
+}
+/* .order li a:link {
+    text-decoration: none;
+    color: white;
+}
+.order li a:hover {
+    color:darkblue;
+    cursor: pointer;
+    
+} */
+
+.order li a:link {
+    text-decoration: none;
+}
+.order li a:hover {
+    cursor: pointer;
+    color: darkgoldenrod;
+}
+.bar-menu {
+        position: absolute;
+        top: 50p;
+        top: 76px;
+        font-size: 30px;
+        padding: 0 20px;
+        color: white;
+    }
+#btn-close-pop {
+    position: absolute;
+    right: 6p;
+    right: 6px;
+    font-size: 23px;
+    color: cornflowerblue;
+}
+.focus {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}

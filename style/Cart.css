@@ -1,7 +1,9 @@
 /* body {
     background: #eee
 } */
-
+#mail_search {
+    width: 70%;
+}
 .button_cart {
     text-align: center;
 }
@@ -98,7 +100,7 @@
     right : 60px;
     top: 135px;
     /* max-width: 300px; */
-    background-color: #a0a4cb;
+    background-color: #EA8782;
     z-index: 99;
     width: 300px;
     border-radius: 10px 0 10px 10px;
@@ -116,12 +118,16 @@
     flex-wrap: wrap;
     background: #FFFFFF;
     border-radius: 10px;
+    position: relative;
 }
 .title_cart {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-    color: rgb(48, 47, 47) ;
+    color: rgb(248, 244, 244) ;
+}
+.title_cart h5 {
+    color: black;
 }
 .detail_item {
     margin: 13px 0 0 0px;
@@ -129,6 +135,13 @@
 .item_cart {
     margin: 5px;
     width: 290px;
+    box-shadow: 0px 0px 4px chocolate;
+}
+.trash {
+    position: absolute;
+    top: 6px;
+    right : 6px;
+    cursor: pointer;
 }
 .price_cart {
     text-align: center;
@@ -142,6 +155,7 @@
     position: absolute;
     right: 9px;
     top: 1px;
+    cursor: pointer;
 }
 .cart_main {
     position: fixed;
@@ -158,3 +172,113 @@
     right: 64px;
     top: 95px;
 }
+.quanlity {
+    display: flex;
+}
+.quanlity > div {
+    margin: 5px;
+}
+.btn_bot_gio_hang, .btn_them_gio_hang {
+    color: salmon;
+    cursor: pointer;
+}
+.so_luong_gio_hang {
+        background:salmon;
+        position: absolute;
+        right: -28px;
+        top: -10px;
+        border-radius: 100px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        display: none;
+        animation: shake_effect ease 0.6s infinite; /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
+}
+
+@keyframes shake_effect {  /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
+    0% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(20deg);
+    }
+    40% {
+        transform: rotate(0);
+    }
+    60% {
+        transform: rotate(-20deg);
+    }
+    80% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.focus_cart-quickview {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* .fa-trash-alt:before {
+    content: "\f2ed";
+    position: absolute;
+    padding-top: -24px;
+    margin: -38px;
+    right: 155px;
+} */
+
+.ui-menu-item-wrapper {
+    background-color:transparent;
+}
+.d-flex {
+    height: 38px;
+}
+.search {
+    width: 160px;
+}
+#ui-id-1 {
+    padding-top: 13px;
+}
+
+/* POP-UP KHI XOÁ MÓN HÀNG SL -1 */
+#popup_content_wrap h1{
+    color:#00cbfe;
+    }
+    p{
+    color:#fff;}
+    img{
+    width:100%;}
+    #popup_content_wrap {
+    width: 100%;
+        height: 100%;   
+        top: 0;
+        left: 0;   
+     position: fixed;	
+        /* background: rgba(0, 0, 0, 0.74); */
+        z-index: 9999999;
+    }
+    #popup_content {
+        width: 50%;
+        height: 300px;
+        padding:20px;
+         position: relative;
+        top: 15%;
+        left: 25%;
+        background: #1b100ed9;
+        border: 10px solid #00cbfe;  
+       
+        
+    }
+    #btn-close-pop {
+        position: relative;
+        /* right: -210px; */
+        left: 596px;
+        font-size: 26px;
+        color: #00cbfe;
+        top: -10px;
+    }

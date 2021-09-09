@@ -1,0 +1,317 @@
+.about_image {
+    display: block;
+    background-color: rgba(235,239,240,1);
+    opacity: 0.8;
+}
+.about_image img {
+    width: 100%;
+}
+.about_person {
+    position: absolute;
+    right: 175px;
+    top: 168px;
+}
+.about_person img {
+    height: 580px;
+    width: 100%;
+}
+.about_logo {
+    top: 0;
+    position: absolute;
+    padding-left: 226px;
+
+}
+.about_logo img {
+    width: 125px;
+}
+.about_content h1 {
+    font-weight: bold;
+    color: white;
+}
+.about_content h2 {
+    color: red;
+}
+.about_content p {
+    color: white;
+}
+.about_content {
+    top: 204px;
+    position: absolute;
+    margin-left: 277px;
+}
+.about_price {
+    margin-left: 105px;
+}
+.about_price p {
+    position:absolute;
+    font-size: 30px;
+    top: 236px;
+    right: 122px;
+    font-weight: bold;
+}
+.about_button {
+    padding-top: 30px;
+}
+.about_button .order {
+    font-size: 25px;
+    margin: 0 129px;
+}
+.list_title {
+    text-align: center;
+    padding-top: 50px;
+}
+.list_title>p {
+    color: rgb(146, 137, 137);
+}
+.list_item {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+.list_item > div > img {
+    /* margin: 12px; */
+    width: 90%;
+}
+.list_item h5 {
+    text-align: center;
+    margin-top: 20px;
+}
+.line {
+    border-bottom: 1px solid black;
+    width: 50%;
+    margin-left: 67px;
+}
+.menu_main table {
+    argin:0 auto; width:600px; border:#063 3px solid
+}
+.menu_title {
+    text-align: center;
+}
+.menu_main {
+    margin-left: 272px;
+}
+.menu {
+    padding-top: 50px;
+}
+.menu_button {
+    margin-left: 498px;
+    padding-top: 20px;
+}
+.team1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.team1_image img {
+    height: 430px;
+}
+.team1_title {
+    text-align: center;
+    padding-top: 100px;
+}
+.team1_title p {
+    color: black;
+}
+.team2_title p {
+    color: black;
+}
+.team2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.team2_image img {
+    height: 430px;
+}
+.team2_title {
+    text-align: center;
+    padding-top: 100px;
+}
+.team {
+    padding-top: 50px;
+}
+.cus_image img {
+    border-radius: 300px;
+    top: 0px;
+    left: 1px;
+    width: 144px;
+    height: 144px;
+}
+#cus1, #cus2, #cus3, #cus4 {
+    text-align: center;
+    padding: 10px;
+
+}
+
+.customer_comment {
+    display: flex; 
+}
+.customer_title {
+    text-align: center;
+}
+.customer {
+    padding: 50px;
+}
+.partner_image img {
+    height: 450px;
+    width: 100%;
+    /* opacity: 0.8; */
+    filter: brightness(50%);
+}
+.partner_quanlity {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    left: 200px;
+}
+.partner_quanlity > div {
+    margin: 15px;
+}
+.partner_quanlity i  {
+    font-size: 50px;
+    color: white;
+}
+.partner_quanlity p  {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.partner_slogan h3 {
+    text-align: center;
+    color: #f9f9f9;
+    position: absolute;
+    left: 186px;
+    margin: -65px 20px 20px 20px;
+}
+#partner_main {
+    margin-top: -295px;
+}
+
+/* POP-UP */
+h1{
+    color:#00cbfe;
+    }
+    p{
+    color:#fff;}
+    img{
+    width:100%;}
+    #popup_content_wrap {
+    width: 100%;
+        height: 100%;   
+        top: 0;
+        left: 0;   
+     position: fixed;	
+        background: rgba(0, 0, 0, 0.74);
+        z-index: 9999999;
+    }
+    #popup_content {
+        width: 50%;
+        height: 300px;
+        padding:20px;
+         position: relative;
+        top: 15%;
+        left: 25%;
+        background: #1b100ed9;
+        border: 10px solid #00cbfe;  
+       
+        
+    }
+
+/* ANIMATE */
+.about_content {
+    animation-duration: 3s !important;
+}
+
+.about_person {
+    animation-duration: 3s !important;
+}
+
+.about_logo {
+    animation-duration: 4s !important;
+}
+/* .team1_title, .team2_title {
+    animation-duration: 2s !important;
+}
+.team1_image, .team2_image {
+    animation-duration: 4s !important;
+}
+.list_title {
+    animation-duration: 3s !important;
+}
+.list_item {
+    animation-duration: 3s !important;
+}
+.menu_title {
+    animation-duration: 3s !important;
+}
+.menu_main {
+    animation-duration: 3s !important;
+}
+.menu_button {
+    animation-duration: 3s !important;
+}
+.customer {
+    animation-duration: 3s !important;
+}
+.partner {
+    animation-duration: 3s !important;
+}  */
+
+.animate_process {
+    animation-duration: 3s !important;
+    opacity: 0;
+}
+
+.footer_image img {
+    height: 1000px;
+    padding-top: 328px;
+}
+.contact {
+    text-align: center;
+    position: relative;
+    top: -650px;
+}
+.contact > div {
+    margin: 12px;
+}
+.contact input {
+    width: 700px;
+    background-color: rgba(255,255,255,0.2) !important;
+    border-color: rgba(255,255,255,0.09);
+    border-radius: 10px;
+    color: white;
+}
+.contact textarea {
+    width: 700px;
+    background-color: rgba(255,255,255,0.2) !important;
+    border-color: rgba(255,255,255,0.09);
+    border-radius: 10px;
+    color: white;
+}
+::placeholder {
+    color: white;
+}
+.submit {
+    width: 700px;
+    font-weight: bold;
+}
+#cus1 p {
+    color: black;
+}
+.image_contact {
+    /* position: absolute;
+    right: 50px; */
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.image_contact img {
+    width: 100%;
+}
+#btn-close-pop {
+    position: relative;
+    /* right: -210px; */
+    left: 596px;
+    font-size: 26px;
+    color: #00cbfe;
+    top: -10px;
+}
