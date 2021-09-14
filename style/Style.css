@@ -547,3 +547,10 @@ color: #8B8A8A;
 #contact-button {
   display: flex;
 }
+
+.image-left img {
+  right: 102px;
+  width: 40%;
+  position: absolute;
+  top: 160px;
+}

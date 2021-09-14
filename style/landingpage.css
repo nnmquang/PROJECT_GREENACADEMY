@@ -315,3 +315,57 @@ h1{
     color: #00cbfe;
     top: -10px;
 }
+
+/* Flash-sale */
+.flash {
+    margin-top: -113px;
+    position: absolute;
+    left: 338px;
+}
+#flash-sale {
+    padding-top: 100px;
+    text-align: center;
+    width: 1318px;
+    height: 800px;
+    
+  }
+  .timer {
+    margin: 0 0 45px;
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    /* position: absolute;
+    top: 616px;
+    left: 207px; */
+  }
+  .timer div {
+    padding: 10px;
+    border-radius: 3px;
+    background: #e74545;
+    display: inline-block;
+    font-family: Oswald;
+    font-size: 26px;
+    font-weight: 400;
+    width: 80px;
+  }
+  .timer .smalltext {
+    color: white;
+    font-size: 12px;
+    font-family: Poppins;
+    font-weight: 500;
+    display: block;
+    padding: 0;
+    width: auto;
+  }
+  .timer #time-up {
+    margin: 8px 0 0;
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    color: #000000;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }

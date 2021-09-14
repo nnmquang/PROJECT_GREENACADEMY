@@ -13,7 +13,12 @@
 <script src="https://kit.fontawesome.com/3f838e4efa.js" crossorigin="anonymous"></script>
 <!-- JQUERY -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+<!-- JQUERY-UI -->
+<title>jQuery UI Autocomplete - Default functionality</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="http:/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
  
 <body>
@@ -27,16 +32,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="myNavbar">
           <li class="nav-item active"> <a class="nav-link" href="#">Trang Chủ</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Dịch Vụ</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#/">Thực Đơn</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Chúng Tôi</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Đặc Biệt</a> </li>
-          <!-- <li class="nav-item"> <a class="nav-link" href="#"><i class="fas fa-store" style="color:darkorange"></i> Cửa Hàng</a> </li> -->
 
-
-          <div class="item_menu_cuahang have-child">
-            <div class="title_cuahang">
-        <li class="nav-item"> <a class="nav-link" href="#"><i class="fas fa-store" style="color:darkorange"></i> Cửa Hàng</a> </li>
+          <div class="item_menu_mainmenu have-child">
+            <div class="title_mainmenu">
+        <li class="nav-item"> <a class="nav-link" href="#"></i>Thực Đơn</a> </li>
             </div>
             <div class="list_cuahang">
                 <div class="list_cuahang1">
@@ -48,24 +47,131 @@
                 <div class="list_cuahang3">
                 <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
                 </div>
-                <!-- <input type='text' class="focus_listmenu">  -->
+                <input type='text' class="focus_listmenu_mainmenu"> 
         </div>
       </div>
 
+          <div class="item_menu_about have-child">
+            <div class="title_about">
+        <li class="nav-item"> <a class="nav-link" href="#"></i>Chúng Tôi</a> </li>
+            </div>
+            <div class="list_cuahang">
+                <div class="list_cuahang1">
+                <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+                </div>
+                <div class="list_cuahang2">
+                <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+                </div>
+                <div class="list_cuahang3">
+                <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+                </div>
+                <input type='text' class="focus_listmenu"> 
+        </div>
+      </div>
 
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="far fa-address-book" style="color: darkorange"></i> Liên Lạc</a>
+          <div class="item_menu_cuahang have-child">
+            <div class="title_cuahang">
+        <li class="nav-item"> <a class="nav-link" href="#"></i>Liên Lạc</a> </li>
+            </div>
+            <div class="list_cuahang">
+                <div class="list_cuahang1">
+                <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+                </div>
+                <div class="list_cuahang2">
+                <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+                </div>
+                <div class="list_cuahang3">
+                <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
+                </div>
+                <input type='text' class="focus_listmenu"> 
+        </div>
+      </div>
+      <div class="login_out">
+        <li class="nav-item"> <a class="nav-link" href="#"></i>Đăng Ký</a> </li>
+        <div class="navbar__link-separator"></div>
+        <li class="nav-item"> <a class="nav-link" href="#"></i>Đăng Nhập</a> </li>
+      </div>
+
+      <div class="cart_main">
+        <img src="image/CART.png" alt="">
+        <div class="so_luong_gio_hang">
+        </div>
+    </div>
+    <div class="favorite">
+      <i class="far fa-heart"></i>
+    </div>
+      
+    <div class="cart_is_buy">
+      <div class="title_cart">
+          <span>Giỏ Hàng</span>
+          <div class="close">
+              <i class="far fa-window-close"></i>
+          </div>
+          <!-- <input type='text' class=focus_cart-quickview>  làm ẩn cart khi click chuột ra ngoài -->
+      </div>
+      <div class="item_cart">
+          <!-- <div class="image_item">
+              <img src='image/c1.png' alt="">
+          </div>
+          <div class="detail_item">
+              <h5>Mì Quãng</h5>
+              <span>30.000 đ</span>
+          </div> -->
+          <!-- <div class="quanlity">
+              SL : 
+          </div> -->
+          <!-- <div class="trash">
+              <i class="fas fa-trash-alt"></i>
+              </div> -->
+      <div class="nd" style="color: #E3B413;">
+          <span>Giỏ hàng còn trống mời bạn đặt món !</span>
+      </div>
+      </div>
+  </div>
+
+  <div class="cart_is_favorite">
+    <div class="title_cart_fa">
+        <span style="color: black;">Danh Sách</span>
+        <div class="close">
+            <i class="far fa-window-close"></i>
+        </div>
+        <!-- <input type='text' class=focus_cart-quickview>  làm ẩn cart khi click chuột ra ngoài -->
+        <div class="item_cart_favorite"></div>
+    </div>
+    <!-- <div class="item_cart_favorite"> -->
+        <!-- <div class="image_item">
+            <img src='image/c1.png' alt="">
+        </div>
+        <div class="detail_item">
+            <h5>Mì Quãng</h5>
+            <span>30.000 đ</span>
+        </div> -->
+        <!-- <div class="quanlity">
+            SL : 
+        </div> -->
+        <!-- <div class="trash">
+            <i class="fas fa-trash-alt"></i>
+            </div> -->
+    <!-- <div class="nd" style="color: #E3B413;">
+        <span>Giỏ hàng còn trống mời bạn đặt món !</span>
+    </div> -->
+    </div>
+</div>
+
+
+          <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Liên Lạc</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" id="drop">
               <li><a class="dropdown-item" href="Contact/Contact-VN.html">Chi Nhánh 12</a></li>
               <li><a class="dropdown-item" href="#">Chi Nhánh 13</a></li>
               <li><a class="dropdown-item" href="#">Chi Nhánh 14</a></li>
             </ul>
-          </li>
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe" style="color: darkorange"></i> </a>
+          </li> -->
+          <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe" style="color: darkorange"></i> </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink" id="drop1">
               <li><a class="Flag-VN" href="Doan-VN.html"> <img src="image/vietnam.png"> Việt</a></li>
               <li><a class="Flag-EN" href="../DOAN-EN/Doan.html"> <img src="image/england.png"> Anh</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
         <form class="d-flex">
           <input class="form-control me-2 input_search" type="search" placeholder="Tìm món ăn" aria-label="Search">
