@@ -1,8 +1,6 @@
-
 // NHAHANGNGON-LIST
 var ds_gio_hang = [];
-ds_nha_hang = [
-    {
+ds_nha_hang = [{
         image: 'image/Food Photo (4).jpg',
         logo: 'image/Restaruant Logo-1.png',
         name: 'Foodworld',
@@ -60,8 +58,7 @@ ds_nha_hang = [
         type: 'Đóng cửa'
     },
 ]
-ds_popup = [
-    {
+ds_popup = [{
         food_name: 'Rice Egg',
         detail: 'Thưởng thức món cơm trứng truyền thống kết hợp với mùi vị tuyệt vời mà bạn không thể bỏ qua.'
     },
@@ -104,41 +101,41 @@ function open_popup(id_item_nha_hang) {
     $('.popup-quickview .card-text').text(ds_popup[id_item_nha_hang].detail);
 
     $('.popup-quickview').show('slow');
-    $('.focus_popup-quickview').focus();    // làm ẩn popup khi click chuột ra ngoài
-// }
+    $('.focus_popup-quickview').focus(); // làm ẩn popup khi click chuột ra ngoài
+    // }
 }
 
 function add_favorite(id_mon_favorite) {
     console.log(id_mon_favorite);
     if (ds_gio_hang.length > 0) {
         var kiem_tra_ton_tai_fa = 0;
-    
-        $.each(ds_gio_hang, function (index, item_gio_hang_hien_tai_fa) {
-          if (item_gio_hang_hien_tai_fa.name == ds_nha_hang[id_mon_favorite].name) {
-            kiem_tra_ton_tai_fa = 1;
-            item_gio_hang_hien_tai_fa.so_luong += 1;
-            return;
-          }
+
+        $.each(ds_gio_hang, function(index, item_gio_hang_hien_tai_fa) {
+            if (item_gio_hang_hien_tai_fa.name == ds_nha_hang[id_mon_favorite].name) {
+                kiem_tra_ton_tai_fa = 1;
+                item_gio_hang_hien_tai_fa.so_luong += 1;
+                return;
+            }
         });
         if (kiem_tra_ton_tai_fa == 0) {
-          ds_nha_hang[id_mon_favorite].so_luong = 1;
-          ds_gio_hang.push(ds_nha_hang[id_mon_favorite]);
+            ds_nha_hang[id_mon_favorite].so_luong = 1;
+            ds_gio_hang.push(ds_nha_hang[id_mon_favorite]);
         };
-    
-      } else {
+
+    } else {
         ds_nha_hang[id_mon_favorite].so_luong = 1;
         ds_gio_hang.push(ds_nha_hang[id_mon_favorite]);
-      }
+    }
 
 
-      render_favorite_cart();  
+    render_favorite_cart();
 
 }
 
 
 function render_favorite_cart() {
     var html_gio_hang_fa = '';
-      $.each(ds_gio_hang, function (index, item_gio_hang_fa) {        //Tạo 1 function để sử dụng nhiều case 31-08
+    $.each(ds_gio_hang, function(index, item_gio_hang_fa) { //Tạo 1 function để sử dụng nhiều case 31-08
         html_gio_hang_fa += `
         <div class="item_cart_favorite">
             <div class="image_item">
@@ -155,13 +152,13 @@ function render_favorite_cart() {
                 </div>
         </div>
             `;
-      });
-      $('.item_cart_favorite').html(html_gio_hang_fa);
+    });
+    $('.list_item_cart_favorite').html(html_gio_hang_fa);
 }
 
 function render_detail_cart() {
     var html_gio_hang = '';
-      $.each(ds_gio_hang, function (index, item_gio_hang) {        //Tạo 1 function để sử dụng nhiều case 31-08
+    $.each(ds_gio_hang, function(index, item_gio_hang) { //Tạo 1 function để sử dụng nhiều case 31-08
         html_gio_hang += `
         <div class="item_cart">
             <div class="image_item">
@@ -178,70 +175,70 @@ function render_detail_cart() {
                 </div>
         </div>
             `;
-      });
-      $('.item_cart').html(html_gio_hang);
+    });
+    $('.item_cart').html(html_gio_hang);
 }
 
-function remove_item_cart(index_item) {              
+function remove_item_cart(index_item) {
     // console.log('remove item index: ' + index_item);
     ds_gio_hang.splice(index_item, 1);
-      if(index_item == 0) {
+    if (index_item == 0) {
         $('.so_luong_gio_hang').hide('slow');
         // $('.cart_is_buy').html += `<span>Giỏ Hàng Trống</span>`;
         // $('.cart_is_buy').text('Gio hang trong')
-      }
-      render_detail_cart()
-      calc_all_item_in_cart();
-  
-  }
+    }
+    render_detail_cart()
+    calc_all_item_in_cart();
 
-function calc_all_item_in_cart() {           //Tính tổng số lượng phải khai báo thêm biến ở dưới
+}
+
+function calc_all_item_in_cart() { //Tính tổng số lượng phải khai báo thêm biến ở dưới
     var so_luong_gio_hang = 0;
-    $.each(ds_gio_hang, function (index, item_gio_hang_hien_tai) {
-      so_luong_gio_hang += item_gio_hang_hien_tai.so_luong;
+    $.each(ds_gio_hang, function(index, item_gio_hang_hien_tai) {
+        so_luong_gio_hang += item_gio_hang_hien_tai.so_luong;
     });
 
     $('.so_luong_gio_hang').html(so_luong_gio_hang);
 
-    if (so_luong_gio_hang) {                // Khi nào kích vào đặt món mới show tổng SL
-      $('.so_luong_gio_hang').html(so_luong_gio_hang);
-      $('.so_luong_gio_hang').show('slow');
+    if (so_luong_gio_hang) { // Khi nào kích vào đặt món mới show tổng SL
+        $('.so_luong_gio_hang').html(so_luong_gio_hang);
+        $('.so_luong_gio_hang').show('slow');
     }
 }
 
 
 
-function add_cart(id_mon) {        // Làm số lượng từng món 
+function add_cart(id_mon) { // Làm số lượng từng món 
 
     if (ds_gio_hang.length > 0) {
         var kiem_tra_ton_tai = 0;
-    
-        $.each(ds_gio_hang, function (index, item_gio_hang_hien_tai) {
-          if (item_gio_hang_hien_tai.name == ds_nha_hang[id_mon].name) {
-            kiem_tra_ton_tai = 1;
-            item_gio_hang_hien_tai.so_luong += 1;
-            return;
-          }
+
+        $.each(ds_gio_hang, function(index, item_gio_hang_hien_tai) {
+            if (item_gio_hang_hien_tai.name == ds_nha_hang[id_mon].name) {
+                kiem_tra_ton_tai = 1;
+                item_gio_hang_hien_tai.so_luong += 1;
+                return;
+            }
         });
         if (kiem_tra_ton_tai == 0) {
-          ds_nha_hang[id_mon].so_luong = 1;
-          ds_gio_hang.push(ds_nha_hang[id_mon]);
+            ds_nha_hang[id_mon].so_luong = 1;
+            ds_gio_hang.push(ds_nha_hang[id_mon]);
         };
-    
-      } else {
+
+    } else {
         ds_nha_hang[id_mon].so_luong = 1;
         ds_gio_hang.push(ds_nha_hang[id_mon]);
-      }
+    }
 
 
-  render_detail_cart();  
-  calc_all_item_in_cart();
+    render_detail_cart();
+    calc_all_item_in_cart();
 
 }
 
 
 
-$(function () {
+$(function() {
     // $(".title_cart").on("click", function() {
     //     if ($(".title_cart").hasClass("up")) {
     //         $(".cart_is_favorite").css("height", "300px");
@@ -253,43 +250,47 @@ $(function () {
     //         $(".cart_is_favorite").css("overflow", "hidden");
     //     }
     // });
-     $('.title_cart_fa').click(function() {
-         if ($(this).hasClass()) {
-            $(".cart_is_favorite").css("height", "300px");
-            $(this).addClass();
-            $(".cart_is_favorite").css("overflow", "auto");
-         } else {
-            $(".cart_is_favorite").css("height", "500px");
-            $(this).removeClass();
+    $('.title_cart_fa').click(function() {
+        if ($(this).hasClass('active')) {
+
+            $(".cart_is_favorite").css("height", "30px");
+            $(this).removeClass('active');
             $(".cart_is_favorite").css("overflow", "hidden");
-         }
-     });
+
+        } else {
+
+            $(".cart_is_favorite").css("height", "300px");
+            $(this).addClass('active');
+            $(".cart_is_favorite").css("overflow", "auto");
+
+        }
+    });
 
 
-    $('.cart_main').click(function () {
+    $('.cart_main').click(function() {
         $('.cart_is_buy').fadeToggle('slow');
         // $('.focus_cart-quickview').focus();   // làm ẩn cart khi click chuột ra ngoài
-      });
-      $('.close').click(function () {
+    });
+    $('.close').click(function() {
         $('.cart_is_buy').hide('slow');
-      });
+    });
 
-    $('#quick_view').click(function () {
+    $('#quick_view').click(function() {
         $('.popup-quickview').show('slow');
     });
-    $('#btn-close').click(function () {
+    $('#btn-close').click(function() {
         $('.popup-quickview').hide('slow');
     });
-    $('.focus_popup-quickview').blur(function () {
-        $('.popup-quickview').hide('slow');    // làm ẩn popup khi click chuột ra ngoài
+    $('.focus_popup-quickview').blur(function() {
+        $('.popup-quickview').hide('slow'); // làm ẩn popup khi click chuột ra ngoài
     });
 
     var html_list_item_nha_hang = '';
 
-    $.each(ds_nha_hang, function (index, item_nha_hang) {
+    $.each(ds_nha_hang, function(index, item_nha_hang) {
         // console.log(index, item_nha_hang);
 
-        var class_item = '';   // Làm button xanh đỏ khi open/close (dong 154 them bien classitem)
+        var class_item = ''; // Làm button xanh đỏ khi open/close (dong 154 them bien classitem)
         if (item_nha_hang.type == 'Mở cửa') {
             class_item = 'alert alert-info';
         } else {
@@ -326,35 +327,34 @@ $(function () {
 
 
 // TOPMONNGON-LIST
-ds_mon_ngon = [
-    {
+ds_mon_ngon = [{
         image: 'image/Image-a.jpg',
         sale: 'Sale Off 10%',
         name: 'Pizza thập cẩm',
         type: 'open',
-        sale_off : '10% Off'
-        
+        sale_off: '10% Off'
+
     },
     {
         image: 'image/Image-b.jpg',
         sale: 'Sale Off 15%',
         name: 'Hamburger bò úc',
         type: 'upcoming',
-        sale_off : '15% Off'
+        sale_off: '15% Off'
     },
     {
         image: 'image/Image-c.jpg',
         sale: 'Sale Off 20%',
         name: 'Spaghetti bacon',
         type: 'new',
-        sale_off : '20% Off'
+        sale_off: '20% Off'
     },
     {
         image: 'image/Image-d.jpg',
         sale: 'Sale Off 10%',
         name: 'Bánh mì trộn',
         type: 'open',
-        sale_off : '10% Off'
+        sale_off: '10% Off'
 
     },
     {
@@ -362,35 +362,35 @@ ds_mon_ngon = [
         sale: 'Sale Off 15%',
         name: 'Mì Nhật',
         type: 'upcoming',
-        sale_off : '15% Off'
+        sale_off: '15% Off'
     },
     {
         image: 'image/Image-f.jpg',
         sale: 'Sale Off 20%',
         name: 'Bò cuộn măng tây',
         type: 'new',
-        sale_off : '20% Off'
+        sale_off: '20% Off'
     },
     {
         image: 'image/Rectangle 336.jpg',
         sale: 'Sale Off 15%',
         name: 'Hamburger cải tím',
         type: 'open',
-        sale_off : '15% Off'
+        sale_off: '15% Off'
     },
     {
         image: 'image/Image-b.jpg',
         sale: 'Sale Off 10%',
         name: 'Hamburger 2 tầng',
         type: 'upcoming',
-        sale_off : '10% Off'
+        sale_off: '10% Off'
     },
 
 ]
 
 function open_popup_mon_ngon(id_item_mon_ngon) {
 
-    $('.image_popup img ').attr('src', ds_mon_ngon[id_item_mon_ngon].image);  // phải gán ${index} dong 282 để lấy được đúng hình popup
+    $('.image_popup img ').attr('src', ds_mon_ngon[id_item_mon_ngon].image); // phải gán ${index} dong 282 để lấy được đúng hình popup
     $('.pop_up_mon_ngon .name').text(ds_mon_ngon[id_item_mon_ngon].name);
     $('.pop_up_mon_ngon .sale_off').text(ds_mon_ngon[id_item_mon_ngon].sale);
     $('.pop_up_mon_ngon .type').text(ds_mon_ngon[id_item_mon_ngon].type);
@@ -403,35 +403,35 @@ function open_popup_mon_ngon(id_item_mon_ngon) {
         class_item = 'badge-success';
     }
     $('.pop_up_mon_ngon .type').attr('class', 'type badge ' + class_item);
-    $('.pop_up_mon_ngon').show('slow');      //phải chạy thuôc tính onclick 276 mới chạy được popup
-    $('.focus_popup-quickview').focus();    // làm ẩn popup khi click chuột ra ngoài
-    
+    $('.pop_up_mon_ngon').show('slow'); //phải chạy thuôc tính onclick 276 mới chạy được popup
+    $('.focus_popup-quickview').focus(); // làm ẩn popup khi click chuột ra ngoài
+
 
     // thay doi css bang jquery vi du
-      $('.pop_up_mon_ngon').css({
-      'background' : 'khaki',
+    $('.pop_up_mon_ngon').css({
+        'background': 'khaki',
     })
-    
+
 }
 
 
 
 $(function() {
-    $('#view_dish').click(function () {
+    $('#view_dish').click(function() {
         $('.pop_up_mon_ngon').show('slow');
     });
-    $('#btn-close-pop').click(function () {
+    $('#btn-close-pop').click(function() {
         $('.pop_up_mon_ngon').hide('slow');
     });
-    $('.focus_popup-quickview').blur(function () {
-        $('.pop_up_mon_ngon').hide('slow');    // làm ẩn popup khi click chuột ra ngoài
+    $('.focus_popup-quickview').blur(function() {
+        $('.pop_up_mon_ngon').hide('slow'); // làm ẩn popup khi click chuột ra ngoài
     });
-    
 
 
-     var html_list_mon_ngon = '';
 
-    $.each(ds_mon_ngon, function (index, item_mon_ngon) { 
+    var html_list_mon_ngon = '';
+
+    $.each(ds_mon_ngon, function(index, item_mon_ngon) {
 
         // $('#list_item_mon_ngon .saleoff').attr('style', 'background-color: blue');
         // var background = document.getElementsByClassName('saleoff');
@@ -442,7 +442,7 @@ $(function() {
         //     background = div.style = "blue";
         // }   
 
-        var class_item = '';     //lam doi mau logo status mon an
+        var class_item = ''; //lam doi mau logo status mon an
         if (item_mon_ngon.type.toLowerCase() == 'new') {
             class_item = 'btn-danger';
         } else if (item_mon_ngon.type.toLowerCase() == 'upcoming') {
@@ -450,7 +450,7 @@ $(function() {
         } else {
             class_item = 'btn-success';
         }
-  
+
 
         html_list_mon_ngon += `
         <div id="list_item_mon_ngon">
@@ -471,49 +471,61 @@ $(function() {
       </figure>
       </div>
         `;
-     });
-     $('#list_item_mon_ngon').html(html_list_mon_ngon);
-    
-// làm thanh tìm kiếm bung ngắn dài
+    });
+    $('#list_item_mon_ngon').html(html_list_mon_ngon);
+
+    // làm thanh tìm kiếm bung ngắn dài
     // $('.btn-search').click(function () {
     //     $('.input_search').show('slow');
     // });
-     $('.input_search').focus(function() {
-         $(this).width('200px');
-     })
-     $('.input_search').blur(function() {
+    $('.input_search').focus(function() {
+        $(this).width('200px');
+    })
+    $('.input_search').blur(function() {
         $(this).width('114px');
     })
-   
-// thay doi css bang jquery vi du
+
+    // thay doi css bang jquery vi du
     // $('.saleoff').css({
     //   'background' : '#fff',
     // })
 
-// làm thanh menu cuahang so xuong jquery
-    $('.item_menu_cuahang.have-child').click(function() {
-        // $('.focus_listmenu').focus();
+    // làm thanh menu cuahang so xuong jquery
+    // $('.item_menu_cuahang.have-child').click(function() {
+    //     // $('.focus_listmenu').focus();
+    //     // $(this).find('.list_cuahang').show('slow');
+    //     $(this).find('.list_cuahang').toggle('slow');
+    //     $(this).toggleClass('active');
+    // })
+
+    // // $('.focus_listmenu').blur(function () {
+    // //     $('.list_cuahang').hide('slow');    // làm ẩn menu khi click chuột ra ngoài
+    // // });
+    // $('.item_menu_about.have-child').click(function() {
+    //     // $(this).find('.list_cuahang').show('slow');
+    //     $(this).find('.list_cuahang').toggle('slow');
+    //     $(this).toggleClass('active');
+    // })
+
+    $('.item_menu_navbar.have-child').click(function() {
         // $(this).find('.list_cuahang').show('slow');
         $(this).find('.list_cuahang').toggle('slow');
+
+        //console.log($(this).find('.focus_listmenu_mainmenu'));
+        $(this).find('.focus_hide_or_show').focus();
+
         $(this).toggleClass('active');
-    })  
-    
-    // $('.focus_listmenu').blur(function () {
-    //     $('.list_cuahang').hide('slow');    // làm ẩn menu khi click chuột ra ngoài
-    // });
-    $('.item_menu_about.have-child').click(function() {
-        // $(this).find('.list_cuahang').show('slow');
-        $(this).find('.list_cuahang').toggle('slow');
-        $(this).toggleClass('active');
-    })
-    
-    $('.item_menu_mainmenu.have-child').click(function() {
-        // $(this).find('.list_cuahang').show('slow');
-        $(this).find('.list_cuahang').toggle('slow');
-        $(this).toggleClass('active');
-    })  
+    });
+
+    $('.focus_hide_or_show').blur(function() {
+        // console.log($($(this).parent()).parent());
+
+        $($($(this).parent()).parent()).find('.list_cuahang').toggle('slow');
+
+        $($($(this).parent()).parent()).toggleClass('active');
+
+    });
 
 
-   
+
 })
-

@@ -1,42 +1,51 @@
 /* Pop-UP-NHAHANGNGON */
+
 .popup-quickview {
     position: fixed;
     top: 100px;
     left: 400px;
     width: 300px;
     z-index: 9;
-    background-color:khaki;
+    background-color: khaki;
     display: none;
     border-radius: 20px;
-
 }
+
 .popup-quickview img {
     width: 100%;
     border-radius: 20px;
 }
+
 #btn-close {
     font-size: 30px;
     position: absolute;
-    right : 10px;
+    right: 10px;
     top: 0px;
     color: white;
-    cursor: pointer;  /*lam ban tay khi kich vao X */
+    cursor: pointer;
+    /*lam ban tay khi kich vao X */
 }
+
 #list_item_nha_hang {
     display: flex;
     flex-wrap: wrap;
 }
+
 .focus_popup-quickview {
     height: 0;
     width: 0;
-    opacity: 0;             /* làm ẩn popup khi click chuột ra ngoài */
+    opacity: 0;
+    /* làm ẩn popup khi click chuột ra ngoài */
 }
 
+
 /* Pop-Up-TOPMONNGON */
+
 #list_item_mon_ngon {
     display: flex;
     flex-wrap: wrap;
 }
+
 .saleoff {
     background-color: #f0ed3e;
     color: rgb(241, 104, 63);
@@ -49,34 +58,40 @@
     width: 100px;
     position: absolute;
     top: 206px;
-  }
+}
+
 .pop_up_mon_ngon {
     position: fixed;
-    top : 200px;
+    top: 200px;
     left: 300px;
     z-index: 99;
-    background: #fff;   
+    background: #fff;
     box-shadow: 5px 5px 5px rgb(240, 236, 29);
     width: 500px;
     display: none;
     border-radius: 10px;
-}  
-.info_popup{
+}
+
+.info_popup {
     display: flex;
     flex-wrap: wrap;
 }
+
 .image_popup img {
     width: 200px;
     border-radius: 10px;
 }
+
 .description {
     margin-left: 20px;
 }
+
 .description .name {
     font-size: 25px;
     color: rgb(88, 85, 85);
     font-weight: bold;
 }
+
 #btn-close-pop {
     color: darkslategray;
     font-size: 30px;
@@ -84,15 +99,19 @@
     position: absolute;
     right: 13px;
     top: 5px;
-    cursor: pointer;  /*lam ban tay khi kich vao X */
+    cursor: pointer;
+    /*lam ban tay khi kich vao X */
 }
+
 .sale_off {
     width: 95px;
     border-radius: 5px;
 }
+
 .price {
     font-size: 30px;
 }
+
 .price span {
     text-decoration: underline;
 }
@@ -101,7 +120,9 @@
     width: 114px;
 }
 
+
 /* Làm Menu sổ xuống Jquery */
+
 .item_menu_cuahang.have-child>.title_cuahang::after {
     display: inline-block;
     width: 0;
@@ -118,9 +139,11 @@
     top: 36px;
     right: 695px;
 }
-.title_cuahang{
+
+.title_cuahang {
     margin-left: 10px;
 }
+
 .item_menu_cuahang.have-child.active>.title_cuahang:after {
     transform: rotate(180deg);
 }
@@ -141,6 +164,7 @@
     top: 36px;
     right: 777px;
 }
+
 .item_menu_about.have-child.active>.title_about:after {
     transform: rotate(180deg);
 }
@@ -161,12 +185,15 @@
     top: 36px;
     right: 875px;
 }
+
 .title_about {
-    margin-left: 10px ;
+    margin-left: 10px;
 }
+
 .item_menu_mainmenu.have-child.active>.title_mainmenu:after {
     transform: rotate(180deg);
 }
+
 .list_cuahang {
     position: absolute;
     top: 55px;
@@ -176,27 +203,36 @@
     display: none;
     border-radius: 5px;
 }
+
 .list_cuahang a:hover {
     background-color: rgb(134, 134, 133);
 }
+
+
 /* .focus_listmenu {
     height: 0;
     width: 0;
     opacity: 0; 
 } */
 
+
 /* login-loutour */
+
 .login_out {
     display: flex;
     margin-left: 60px;
 }
+
 .navbar__link-separator {
-    border-right: 1px solid hsla(0,0%,100%,.4);
+    border-right: 1px solid hsla(0, 0%, 100%, .4);
     height: .8130rem;
     position: relative;
     bottom: -14px;
 }
+
+
 /* cart gio hang */
+
 .cart_main {
     position: absolute;
     right: 428px;
@@ -204,23 +240,26 @@
     width: 33px;
     /* z-index: 99; */
 }
+
 .cart_main img {
     width: 25px;
 }
 
+
 /* CART ITEM */
+
 .cart_is_buy {
     position: fixed;
-    right : 446px;
+    right: 446px;
     top: 48px;
     /* max-width: 300px; */
     background-color: #EA8782;
     z-index: 99;
     width: 300px;
     border-radius: 10px 0px 10px 10px;
-    
     display: none;
 }
+
 .cart_is_favorite {
     position: fixed;
     bottom: 0px;
@@ -232,19 +271,28 @@
     z-index: 99;
 }
 
+.list_item_cart_favorite {
+    height: 280px;
+    overflow: scroll;
+    background: #fff;
+}
+
 .close {
     position: absolute;
     right: 9px;
     top: 1px;
     cursor: pointer;
 }
+
 .image_item img {
     width: 60%;
     margin: 10px 0 5px 10px;
 }
+
 .image_item {
     width: 100px;
 }
+
 .item_cart {
     display: flex;
     flex-wrap: wrap;
@@ -260,18 +308,22 @@
     border-radius: 10px;
     position: relative;
 }
+
 .title_cart {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-    color: rgb(248, 244, 244) ;
+    color: rgb(248, 244, 244);
 }
+
 .title_cart h5 {
     color: black;
 }
+
 .detail_item {
     margin: 13px 0 0 0px;
 }
+
 .item_cart {
     margin: 5px;
     width: 290px;
@@ -279,7 +331,7 @@
 }
 
 .so_luong_gio_hang {
-    background:salmon;
+    background: salmon;
     position: absolute;
     right: -3px;
     top: -9px;
@@ -291,10 +343,12 @@
     font-size: 11px;
     font-weight: bold;
     display: none;
-    animation: shake_effect ease 0.6s infinite; /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
+    animation: shake_effect ease 0.6s infinite;
+    /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
 }
 
-@keyframes shake_effect {  /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
+@keyframes shake_effect {
+    /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
     0% {
         transform: rotate(0);
     }
@@ -318,11 +372,13 @@
 .trash {
     position: absolute;
     top: 6px;
-    right : 6px;
+    right: 6px;
     cursor: pointer;
 }
 
+
 /* favorite */
+
 .favorite {
     color: #FFB30E;
     position: initial;
