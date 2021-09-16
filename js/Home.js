@@ -1,5 +1,6 @@
 // NHAHANGNGON-LIST
 var ds_gio_hang = [];
+var ds_gio_hang_fa = [];
 ds_nha_hang = [{
         image: 'image/Food Photo (4).jpg',
         logo: 'image/Restaruant Logo-1.png',
@@ -105,37 +106,94 @@ function open_popup(id_item_nha_hang) {
     // }
 }
 
+function check_cart() { //Check-cart (lưu cart khi thoát trang vào lại) 31.08
+    var ds_gio_hang_dang_luu = localStorage.getItem('cart');      //Chuyển mảng đối tượng thành chuỗi (localstogare 31-08)
+
+    if (typeof ds_gio_hang_dang_luu != 'undefined' && ds_gio_hang_dang_luu != null) {
+        ds_gio_hang = JSON.parse(ds_gio_hang_dang_luu);
+
+        //console.log(ds_gio_hang);
+        render_detail_cart(); //Tạo 1 function để sử dụng nhiều case 31-08
+        calc_all_item_in_cart();
+    }
+}
+
+function check_cart_fa() { //Check-cart (lưu cart khi thoát trang vào lại) 31.08
+    var ds_gio_hang_dang_luu_fa = localStorage.getItem('cart_fa');      //Chuyển mảng đối tượng thành chuỗi (localstogare 31-08)
+
+    if (typeof ds_gio_hang_dang_luu_fa != 'undefined' && ds_gio_hang_dang_luu_fa != null) {
+        ds_gio_hang_fa = JSON.parse(ds_gio_hang_dang_luu_fa);
+
+        //console.log(ds_gio_hang);
+        render_favorite_cart(); //Tạo 1 function để sử dụng nhiều case 31-08
+        calc_all_item_in_cart_fa();
+    }
+}
+
 function add_favorite(id_mon_favorite) {
     console.log(id_mon_favorite);
-    if (ds_gio_hang.length > 0) {
+    if (ds_gio_hang_fa.length > 0) {
         var kiem_tra_ton_tai_fa = 0;
 
-        $.each(ds_gio_hang, function(index, item_gio_hang_hien_tai_fa) {
+        $.each(ds_gio_hang_fa, function(index, item_gio_hang_hien_tai_fa) {
             if (item_gio_hang_hien_tai_fa.name == ds_nha_hang[id_mon_favorite].name) {
                 kiem_tra_ton_tai_fa = 1;
-                item_gio_hang_hien_tai_fa.so_luong += 1;
+                item_gio_hang_hien_tai_fa.so_luong_fa += 1;
                 return;
             }
         });
         if (kiem_tra_ton_tai_fa == 0) {
-            ds_nha_hang[id_mon_favorite].so_luong = 1;
-            ds_gio_hang.push(ds_nha_hang[id_mon_favorite]);
+            ds_nha_hang[id_mon_favorite].so_luong_fa = 1;
+            ds_gio_hang_fa.push(ds_nha_hang[id_mon_favorite]);
         };
 
     } else {
-        ds_nha_hang[id_mon_favorite].so_luong = 1;
-        ds_gio_hang.push(ds_nha_hang[id_mon_favorite]);
+        ds_nha_hang[id_mon_favorite].so_luong_fa = 1;
+        ds_gio_hang_fa.push(ds_nha_hang[id_mon_favorite]);
     }
 
 
     render_favorite_cart();
+    calc_all_item_in_cart_fa()
+
+}
+
+function remove_item_fav(index_item_fa) {
+    // console.log('remove item index: ' + index_item);
+    ds_gio_hang_fa.splice(index_item_fa, 1);
+    if (index_item_fa == 0) {
+        // $('.so_luong_gio_hang').hide('slow');
+        // $('.cart_is_buy').html += `<span>Giỏ Hàng Trống</span>`;
+        // $('.cart_is_buy').text('Gio hang trong')
+    }
+    render_favorite_cart();
+    calc_all_item_in_cart_fa()
+
+}
+
+function calc_all_item_in_cart_fa() { //Tính tổng số lượng phải khai báo thêm biến ở dưới
+    var so_luong_gio_hang_fa = 0;
+    $.each(ds_gio_hang_fa, function(index, item_gio_hang_hien_tai_fa) {
+        so_luong_gio_hang_fa += item_gio_hang_hien_tai_fa.so_luong_fa;
+    });
+
+    $('.so_luong_gio_hang_fa').html(so_luong_gio_hang_fa);
+
+    if (so_luong_gio_hang_fa) { // Khi nào kích vào đặt món mới show tổng SL
+        $('.so_luong_gio_hang_fa').html(so_luong_gio_hang_fa);
+        $('.so_luong_gio_hang_fa').show('slow');
+    }
+
+    var str_gio_hang_fa = JSON.stringify(ds_gio_hang_fa) //Chuyển mảng đối tượng thành chuỗi (localstogare 31-08)
+    console.log(str_gio_hang_fa)
+    localStorage.setItem('cart_fa', str_gio_hang_fa);
 
 }
 
 
 function render_favorite_cart() {
     var html_gio_hang_fa = '';
-    $.each(ds_gio_hang, function(index, item_gio_hang_fa) { //Tạo 1 function để sử dụng nhiều case 31-08
+    $.each(ds_gio_hang_fa, function(index, item_gio_hang_fa) { //Tạo 1 function để sử dụng nhiều case 31-08
         html_gio_hang_fa += `
         <div class="item_cart_favorite">
             <div class="image_item">
@@ -144,10 +202,10 @@ function render_favorite_cart() {
             <div class="detail_item">
                 <h5>${item_gio_hang_fa.name}</h5>
                 <div class="quanlity">
-                    SL : ${item_gio_hang_fa.so_luong}
+                    SL : ${item_gio_hang_fa.so_luong_fa}
                 </div>
             </div>
-            <div class="trash_fa" onclick="remove_item_cart(${index})">  
+            <div class="trash_fa" onclick="remove_item_fav(${index})">  
                     <i class="fas fa-trash-alt"></i>
                 </div>
         </div>
@@ -204,6 +262,10 @@ function calc_all_item_in_cart() { //Tính tổng số lượng phải khai báo
         $('.so_luong_gio_hang').html(so_luong_gio_hang);
         $('.so_luong_gio_hang').show('slow');
     }
+
+    var str_gio_hang = JSON.stringify(ds_gio_hang) //Chuyển mảng đối tượng thành chuỗi (localstogare 31-08)
+    console.log(str_gio_hang)
+    localStorage.setItem('cart', str_gio_hang);
 }
 
 
@@ -239,6 +301,8 @@ function add_cart(id_mon) { // Làm số lượng từng món
 
 
 $(function() {
+    check_cart();
+    check_cart_fa();
     // $(".title_cart").on("click", function() {
     //     if ($(".title_cart").hasClass("up")) {
     //         $(".cart_is_favorite").css("height", "300px");
@@ -250,22 +314,26 @@ $(function() {
     //         $(".cart_is_favorite").css("overflow", "hidden");
     //     }
     // });
+
+
     $('.title_cart_fa').click(function() {
         if ($(this).hasClass('active')) {
 
             $(".cart_is_favorite").css("height", "30px");
             $(this).removeClass('active');
-            $(".cart_is_favorite").css("overflow", "hidden");
+            // $(".cart_is_favorite").css("overflow", "hidden");
 
         } else {
 
             $(".cart_is_favorite").css("height", "300px");
             $(this).addClass('active');
-            $(".cart_is_favorite").css("overflow", "auto");
+            // $(".cart_is_favorite").css("overflow", "auto");
 
         }
     });
 
+
+    
 
     $('.cart_main').click(function() {
         $('.cart_is_buy').fadeToggle('slow');

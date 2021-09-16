@@ -9,26 +9,37 @@
     <link href="style/Home.css" rel="stylesheet" type='text/css'>
     <!--Bootstrap-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/3f838e4efa.js" crossorigin="anonymous"></script>
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- JQUERY-UI -->
     <title>jQuery UI Autocomplete - Default functionality</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="http:/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Googlemap -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD57PRHJQSQ5XQOuNtAWpRBOP-UCX5pSzA&sensor=false"></script>
+    <script language="javascript" type="text/javascript"></script>
 </head>
 
 <body>
     <!--Menu-->
     <div class="container-fluid" id="mainmenu">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-            <div class="container-fluid"> <a class="navbar-brand" href="#" id="tieude"><i class="fas fa-car-crash"></i><span style="color: #F17228">food</span>wagon</a>
+            <div class="container-fluid"> <a class="navbar-brand" href="#" id="tieude"><i
+                        class="fas fa-car-crash"></i><span style="color: #F17228">food</span>wagon</a>
                 <div id="button-menu">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="myNavbar">
@@ -108,9 +119,9 @@
                             <div class="so_luong_gio_hang">
                             </div>
                         </div>
-                        <div class="favorite">
+                        <!-- <div class="favorite">
                             <i class="far fa-heart"></i>
-                        </div>
+                        </div> -->
 
                         <div class="cart_is_buy">
                             <div class="title_cart">
@@ -122,18 +133,18 @@
                             </div>
                             <div class="item_cart">
                                 <!-- <div class="image_item">
-              <img src='image/c1.png' alt="">
-          </div>
-          <div class="detail_item">
-              <h5>Mì Quãng</h5>
-              <span>30.000 đ</span>
-          </div> -->
+                                    <img src='image/c1.png' alt="">
+                                    </div>
+                                    <div class="detail_item">
+                                    <h5>Mì Quãng</h5>
+                                    <span>30.000 đ</span>
+                                    </div> -->
                                 <!-- <div class="quanlity">
-              SL : 
-          </div> -->
+                                        SL : 
+                                        </div> -->
                                 <!-- <div class="trash">
-              <i class="fas fa-trash-alt"></i>
-              </div> -->
+                                        <i class="fas fa-trash-alt"></i>
+                                        </div> -->
                                 <div class="nd" style="color: #E3B413;">
                                     <span>Giỏ hàng còn trống mời bạn đặt món !</span>
                                 </div>
@@ -142,30 +153,32 @@
 
                         <div class="cart_is_favorite">
                             <div class="title_cart_fa">
-                                <span style="color: black;">Danh Sách</span>
-                                <div class="close">
+                                <span style="color: #ffa82e;">Danh Sách Yêu Thích</span>
+                                <div class="so_luong_gio_hang_fa"></div>
+                                <!-- <div class="close">
                                     <i class="far fa-window-close"></i>
-                                </div>
+                                </div> -->
                                 <!-- <input type='text' class=focus_cart-quickview>  làm ẩn cart khi click chuột ra ngoài -->
-                                <div class="list_item_cart_favorite"></div>
+                                
                             </div>
-                            <!-- <div class="item_cart_favorite"> -->
+                            <div class="list_item_cart_favorite"></div> 
+                            <!-- phai dat div nay o ngoai thi click moi hieu   -->
                             <!-- <div class="image_item">
-            <img src='image/c1.png' alt="">
-        </div>
-        <div class="detail_item">
-            <h5>Mì Quãng</h5>
-            <span>30.000 đ</span>
-        </div> -->
-                            <!-- <div class="quanlity">
-            SL : 
-        </div> -->
-                            <!-- <div class="trash">
-            <i class="fas fa-trash-alt"></i>
-            </div> -->
-                            <!-- <div class="nd" style="color: #E3B413;">
-        <span>Giỏ hàng còn trống mời bạn đặt món !</span>
-    </div> -->
+                                    <img src='image/c1.png' alt="">
+                                    </div>
+                                    <div class="detail_item">
+                                    <h5>Mì Quãng</h5>
+                                    <span>30.000 đ</span>
+                                    </div> -->
+                                    <!-- <div class="quanlity">
+                                    SL : 
+                                    </div> -->
+                                    <!-- <div class="trash">
+                                    <i class="fas fa-trash-alt"></i>
+                                    </div> -->
+                                    <!-- <div class="nd" style="color: #E3B413;">
+                                    <span>Giỏ hàng còn trống mời bạn đặt món !</span>
+                                    </div> -->
                         </div>
                 </div>
 
@@ -185,8 +198,10 @@
           </li> -->
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2 input_search" type="search" placeholder="Tìm món ăn" aria-label="Search">
-                    <button class="btn btn-outline-warning btn-search " type="submit"><i class="fas fa-search"></i> Tìm Kiếm </button>
+                    <input class="form-control me-2 input_search" type="search" placeholder="Tìm món ăn"
+                        aria-label="Search">
+                    <button class="btn btn-outline-warning btn-search " type="submit"><i class="fas fa-search"></i> Tìm
+                        Kiếm </button>
                 </form>
             </div>
     </div>
@@ -196,12 +211,18 @@
     <div class="container-fluid" id="banner">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 0"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                    aria-label="Slide 5"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active"> <img src="image/BestBrunches-04.jpg" class="d-block w-100" alt="...">
@@ -241,8 +262,12 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                    class="visually-hidden">Previous</span> </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                    class="visually-hidden">Next</span> </button>
         </div>
     </div>
     <!--VỀ CHÚNG TÔI-->
@@ -252,12 +277,19 @@
             <div class="row">
                 <div class="col-12 col-sm-6" id="aboutContent1">
                     <h4 class="text-dark">"Tinh hoa của ẩm thực đem đến giá trị tinh thần cho người thưởng thức."</h4>
-                    <p id="p1" class="text-start"> FoodWagon là một chuỗi hệ thống nhỏ gồm các đầu bếp chuyên nghiệp chuẩn bị các bữa ăn tươi ngon được nấu tại các nhà hàng nổi tiếng. </p>
-                    <p class="text-start"> Chúng tôi cung cấp dịch vụ giao hàng miễn phí đến tận nhà hoặc văn phòng từ Thứ Hai đến Thứ Sáu. </p>
-                    <p class="text-start"> FoodWagon giúp bạn dễ dàng lựa chọn các món ăn ngon như trong nhà bếp của chính mình, tiết kiệm thời gian với chi phí thấp, cho bạn nhiều thời gian hơn để sống cuộc sống bên ngoài thay vì ngồi sau bếp </p>
-                    <p class="text-start"> Chúng tôi cẩn thận cung cấp nguồn nguyên liệu chất lượng tốt nhất và tươi nhất, được chuẩn bị trước hàng giờ đồng hồ. </p>
-                    <p class="text-start"> FoodWagon bắt đầu hoạt động từ năm 2001 và cung cấp những bữa ăn nấu tại nhà hoàn hảo, chất lượng và ngon miệng! </p>
-                    <button type="button" class="btn btn-dark btn-lg" style="color:#FFB20E">THỰC ĐƠN CỦA CHÚNG TÔI <i class="fas fa-long-arrow-alt-right"></i></button>
+                    <p id="p1" class="text-start"> FoodWagon là một chuỗi hệ thống nhỏ gồm các đầu bếp chuyên nghiệp
+                        chuẩn bị các bữa ăn tươi ngon được nấu tại các nhà hàng nổi tiếng. </p>
+                    <p class="text-start"> Chúng tôi cung cấp dịch vụ giao hàng miễn phí đến tận nhà hoặc văn phòng từ
+                        Thứ Hai đến Thứ Sáu. </p>
+                    <p class="text-start"> FoodWagon giúp bạn dễ dàng lựa chọn các món ăn ngon như trong nhà bếp của
+                        chính mình, tiết kiệm thời gian với chi phí thấp, cho bạn nhiều thời gian hơn để sống cuộc sống
+                        bên ngoài thay vì ngồi sau bếp </p>
+                    <p class="text-start"> Chúng tôi cẩn thận cung cấp nguồn nguyên liệu chất lượng tốt nhất và tươi
+                        nhất, được chuẩn bị trước hàng giờ đồng hồ. </p>
+                    <p class="text-start"> FoodWagon bắt đầu hoạt động từ năm 2001 và cung cấp những bữa ăn nấu tại nhà
+                        hoàn hảo, chất lượng và ngon miệng! </p>
+                    <button type="button" class="btn btn-dark btn-lg" style="color:#FFB20E">THỰC ĐƠN CỦA CHÚNG TÔI <i
+                            class="fas fa-long-arrow-alt-right"></i></button>
                 </div>
                 <div class="col-12 col-sm-6" id="aboutContent4">
                     <div class="flexslider left">
@@ -268,7 +300,8 @@
                                     <h2>5 Day</h2>
                                     <div class="category">
                                         <p>250.000 VNĐ</p>
-                                        <span>Giảm giá</span> </div>
+                                        <span>Giảm giá</span>
+                                    </div>
                                 </div>
                             </li>
                             <li> <img src="image/2021FoodPredictions-4.jpg">
@@ -277,7 +310,8 @@
                                     <h2>5 Day</h2>
                                     <div class="category">
                                         <p>250.000 VNĐ</p>
-                                        <span>Giảm giá</span> </div>
+                                        <span>Giảm giá</span>
+                                    </div>
                                 </div>
                             </li>
                             <li> <img src="image/BestBrunches-07.jpg">
@@ -286,7 +320,8 @@
                                     <h2>5 Day</h2>
                                     <div class="category">
                                         <p>250.000 VNĐ</p>
-                                        <span>Giảm giá</span> </div>
+                                        <span>Giảm giá</span>
+                                    </div>
                                 </div>
                             </li>
                             <li> <img src="image/BestBrunches-07.jpg">
@@ -295,7 +330,8 @@
                                     <h2>5 Day</h2>
                                     <div class="category">
                                         <p>250.000 VNĐ</p>
-                                        <span>Giảm giá</span> </div>
+                                        <span>Giảm giá</span>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -456,7 +492,8 @@
             <h1 class="text-center">CÁCH ĐẶT MÓN</h1>
             <div class="row">
                 <div class="col-12 col-sm-3">
-                    <figure class="figure1"> <img src="image/rsz_map_marker.png" class="figure-img img-fluid rounded" alt="...">
+                    <figure class="figure1"> <img src="image/rsz_map_marker.png" class="figure-img img-fluid rounded"
+                            alt="...">
                         <figcaption class="figure-caption" id="texthow0">Chọn địa điểm</figcaption>
                         <div id="texth0">
                             <p>Chọn địa điểm mà thức ăn của bạn sẽ được giao.</p>
@@ -464,7 +501,8 @@
                     </figure>
                 </div>
                 <div class="col-12 col-sm-3">
-                    <figure class="figure1"> <img src="image/rsz_icons.png" class="figure-img img-fluid rounded" alt="...">
+                    <figure class="figure1"> <img src="image/rsz_icons.png" class="figure-img img-fluid rounded"
+                            alt="...">
                         <figcaption class="figure-caption" id="texthow1">Chọn đơn hàng</figcaption>
                         <div id="texth1">
                             <p>Kiểm tra hàng trăm thực đơn để chọn món ăn yêu thích của bạn.</p>
@@ -472,7 +510,8 @@
                     </figure>
                 </div>
                 <div class="col-12 col-sm-3">
-                    <figure class="figure1"> <img src="image/rsz_icons_1.png" class="figure-img img-fluid rounded" alt="...">
+                    <figure class="figure1"> <img src="image/rsz_icons_1.png" class="figure-img img-fluid rounded"
+                            alt="...">
                         <figcaption class="figure-caption" id="texthow2">Thanh toán tiện lợi</figcaption>
                         <div id="texth2">
                             <p>Nhanh chóng, an toàn và đơn giản. Chọn một số phương thức thanh toán.</p>
@@ -480,7 +519,8 @@
                     </figure>
                 </div>
                 <div class="col-12 col-sm-3">
-                    <figure class="figure1"> <img src="image/rsz_donut.png" class="figure-img img-fluid rounded" alt="...">
+                    <figure class="figure1"> <img src="image/rsz_donut.png" class="figure-img img-fluid rounded"
+                            alt="...">
                         <figcaption class="figure-caption" id="texthow3">Thưởng thức bữa ăn</figcaption>
                         <div id="texth3">
                             <p>Món ăn được làm và giao trực tiếp đến nhà của bạn.</p>
@@ -503,70 +543,82 @@
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Pog Fried</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 8</p>
                             <h6>100.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Rectangle 336.jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Cheese Burger</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 1</p>
                             <h6>60.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Rectangle 336 (1).jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Toffe’s Cake</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 2</p>
                             <h6>80.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Rectangle 336 (2).jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Dancake</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 3</p>
                             <h6>40.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Rectangle 336 (3).jpg" class="img-thumbnail" alt="image11">
-                            <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Crispy Sandwitch</p>
+                            <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Crispy Sandwitch
+                            </p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 4</p>
                             <h6>60.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Rectangle 336 (4).jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Thai Soup</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 5</p>
                             <h6>55.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Image-d.jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Bread Viet</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 6</p>
                             <h6>48.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Image-c.jpg" class="img-thumbnail" alt="image11">
-                            <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Noodle Egg Mix</p>
+                            <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Noodle Egg Mix
+                            </p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 7</p>
                             <h6>23.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Image-b.jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Hamburger Mix</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 8</p>
                             <h6>90.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                     <div class="item">
                         <div class="pad15"> <img src="image/Image-a.jpg" class="img-thumbnail" alt="image11">
                             <p class="lead" style="color: #424242; font-weight: bold; font-size: 16px">Pizza Turkey</p>
                             <p><i class="fas fa-map-marker-alt"></i> Quận 9</p>
                             <h6>120.000 đ</h6>
-                            <a href="#" class="btn btn-warning">Đặt ngay</a> </div>
+                            <a href="#" class="btn btn-warning">Đặt ngay</a>
+                        </div>
                     </div>
                 </div>
                 <button class="btn btn-warning leftLst">&#8810;</button>
@@ -584,7 +636,8 @@
             <img src="image/Food Photo (4).jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Rice Egg</h5>
-                <p class="card-text">Thưởng thức món cơm trứng truyền thống kết hợp với mùi vị tuyệt vời mà bạn không thể bỏ qua.</p>
+                <p class="card-text">Thưởng thức món cơm trứng truyền thống kết hợp với mùi vị tuyệt vời mà bạn không
+                    thể bỏ qua.</p>
                 <a href="#" class="btn btn-warning">Đặt ngay</a>
                 <input type='text' class=focus_popup-quickview>
                 <!--làm ẩn popup khi click chuột ra ngoài-->
@@ -598,20 +651,22 @@
                         <div class="overlay1">
                             <div class="text">
                                 <ul>
-                                    <li><a href="#" title="Add to Favorite"><i class="fa fa-heart" ></i></a></li>
-                                    <li><a href="#" title="Add to Compare"><i class="fa fa-refresh" ></i></a></li>
-                                    <li><a id="quick_view" title="Quick View"><i class="fa fa-search" ></i></a></li>
+                                    <li><a href="#" title="Add to Favorite"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#" title="Add to Compare"><i class="fa fa-refresh"></i></a></li>
+                                    <li><a id="quick_view" title="Quick View"><i class="fa fa-search"></i></a></li>
                                     <li><a href="#" title="Add to Cart"><i class="fas fa-cart-plus"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div id="ngon1">
-                        <figcaption class="figure-caption"><img src="image/Restaruant Logo-1.png"> Foodworld</figcaption>
+                        <figcaption class="figure-caption"><img src="image/Restaruant Logo-1.png"> Foodworld
+                        </figcaption>
                         <p style="color: darkorange"><i class="fas fa-star"></i> 46</p>
                     </div>
                 </figure>
-                <div class="alert alert-danger" role="alert" id="remain"><a href="#" class="alert-link">Đóng cửa </a> </div>
+                <div class="alert alert-danger" role="alert" id="remain"><a href="#" class="alert-link">Đóng cửa </a>
+                </div>
             </div>
         </div>
 
@@ -800,11 +855,14 @@
                     <div class="textabout">
                         <h1><span style="color: #353535">Giá tốt nhất</span> Crispy Sandwiches</h1>
                     </div>
-                    <p style="color: #616161">Thưởng thức kích thước lớn của bánh mì. Với lát bánh mì sandwich hoàn hảo.</p>
-                    <button type="button" class="btn btn-warning" style="color: white;font-weight: bold">Đặt ngay</button>
+                    <p style="color: #616161">Thưởng thức kích thước lớn của bánh mì. Với lát bánh mì sandwich hoàn hảo.
+                    </p>
+                    <button type="button" class="btn btn-warning" style="color: white;font-weight: bold">Đặt
+                        ngay</button>
                 </div>
                 <div class="col-sm-6">
-                    <div class="snip1573"><img src="image/Image-about.jpg" class="img-fluid" style="border-radius: 15px" />
+                    <div class="snip1573"><img src="image/Image-about.jpg" class="img-fluid"
+                            style="border-radius: 15px" />
                         <figcaption>
                             <h3>HOT</h3>
                         </figcaption>
@@ -816,7 +874,8 @@
         <div id="about-main2" class="shadow p-3 mb-5 bg-body rounded">
             <div class="row" id="about2">
                 <div class="col-sm-6">
-                    <div class="snip1573"><img src="image/Image-about1.jpg" class="img-fluid" style="border-radius: 15px" />
+                    <div class="snip1573"><img src="image/Image-about1.jpg" class="img-fluid"
+                            style="border-radius: 15px" />
                         <figcaption>
                             <h3>HOT</h3>
                         </figcaption>
@@ -827,8 +886,10 @@
                     <div class="textabout">
                         <h1><span style="color: #353535">Tiệc tại gia với</span> Fried Chicken</h1>
                     </div>
-                    <p style="color: #616161">Tận hưởng món gà rán ngon nhất với hương vị chanh ớt cay nồng. Còn gì bằng cho những buổi vui vẻ cùng gia đình và bạn bè.</p>
-                    <button type="button" class="btn btn-warning" style="color: white;font-weight: bold">Đặt ngay</button>
+                    <p style="color: #616161">Tận hưởng món gà rán ngon nhất với hương vị chanh ớt cay nồng. Còn gì bằng
+                        cho những buổi vui vẻ cùng gia đình và bạn bè.</p>
+                    <button type="button" class="btn btn-warning" style="color: white;font-weight: bold">Đặt
+                        ngay</button>
                 </div>
             </div>
         </div>
@@ -838,11 +899,14 @@
                     <div class="textabout">
                         <h1><span style="color: #353535">Bạn muốn ăn nóng hay cay với</span> Pizza?</h1>
                     </div>
-                    <p style="color: #616161">Kết nối với một người bạn và thưởng thức những chiếc bánh pizza nóng hổi và giòn tan. Hãy thử nó ngay hôm nay.</p>
-                    <button type="button" class="btn btn-warning" style="color: white;font-weight: bold">Đặt ngay</button>
+                    <p style="color: #616161">Kết nối với một người bạn và thưởng thức những chiếc bánh pizza nóng hổi
+                        và giòn tan. Hãy thử nó ngay hôm nay.</p>
+                    <button type="button" class="btn btn-warning" style="color: white;font-weight: bold">Đặt
+                        ngay</button>
                 </div>
                 <div class="col-sm-6">
-                    <div class="snip1573"><img src="image/Image-side2.jpg" class="img-fluid" style="border-radius: 15px" />
+                    <div class="snip1573"><img src="image/Image-side2.jpg" class="img-fluid"
+                            style="border-radius: 15px" />
                         <figcaption>
                             <h3>HOT</h3>
                         </figcaption>
@@ -852,14 +916,35 @@
             </div>
         </div>
     </div>
+    <!-- MAPGOOGLE -->
+    <table>
+        <tr>
+            <td>
+                <input id="addressinput" type="text" style="width: 570px" />
+            </td>
+            <td>
+                <input id="Button1" type="button" value="Find" onclick="return Button1_onclick()" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="map" style="height: 500px; width: 630px;"></div>
+            </td>
+        </tr>
+    </table>
+
+    
     <!--Team-->
     <div class="container" id="team">
         <div class="title2">
             <h1 class="text-center" id="team-5">ĐỘI NGŨ CỦA CHÚNG TÔI</h1>
         </div>
         <div class="team-text">
-            <p style="text-align: center">Kể từ ngày thành lập, Foodwagoon nổi danh trong giới ẩm thực cả nước với hàng trăm món ăn ngon cùng cung cách phục vụ tận tình, chuyên nghiệp, luôn đứng đầu trong danh sách webside được nhiều khách hàng yêu thích.</p>
-            <p style="text-align: center">Góp phần quan trọng tạo nên thành công của nhà hàng không thể không nhắc tới đội ngũ nhân sự của Foodwagon - những con người trẻ trung, giàu tài năng và tâm huyết.</p>
+            <p style="text-align: center">Kể từ ngày thành lập, Foodwagoon nổi danh trong giới ẩm thực cả nước với hàng
+                trăm món ăn ngon cùng cung cách phục vụ tận tình, chuyên nghiệp, luôn đứng đầu trong danh sách webside
+                được nhiều khách hàng yêu thích.</p>
+            <p style="text-align: center">Góp phần quan trọng tạo nên thành công của nhà hàng không thể không nhắc tới
+                đội ngũ nhân sự của Foodwagon - những con người trẻ trung, giàu tài năng và tâm huyết.</p>
         </div>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -871,16 +956,20 @@
                     </div>
                     <ul class="social">
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin"
+                                aria-hidden="true"></a>
                         </li>
                     </ul>
                 </div>
@@ -894,16 +983,20 @@
                     </div>
                     <ul class="social">
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin"
+                                aria-hidden="true"></a>
                         </li>
                     </ul>
                 </div>
@@ -917,16 +1010,20 @@
                     </div>
                     <ul class="social">
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin"
+                                aria-hidden="true"></a>
                         </li>
                     </ul>
                 </div>
@@ -940,16 +1037,20 @@
                     </div>
                     <ul class="social">
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus"
+                                aria-hidden="true"></a>
                         </li>
                         <li>
-                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a>
+                            <a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin"
+                                aria-hidden="true"></a>
                         </li>
                     </ul>
                 </div>
@@ -1075,8 +1176,10 @@
                     </div>
                     <p>Nhận ưu đãi độc quyền trong hộp thư của bạn</p>
                     <form class="d-flex" id="search2">
-                        <input class="form-control me-3" type="search" placeholder="Nhập Email của bạn" aria-label="Search">
-                        <button class="btn btn-warning " type="submit" style="box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75); color: white"> Đăng Ký </button>
+                        <input class="form-control me-3" type="search" placeholder="Nhập Email của bạn"
+                            aria-label="Search">
+                        <button class="btn btn-warning " type="submit"
+                            style="box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75); color: white"> Đăng Ký </button>
                     </form>
                 </div>
             </div>
@@ -1090,7 +1193,8 @@
                     <p>All rights Reserved &copy; Your Company, 2021</p>
                 </div>
                 <div class="col-md-6 copy_right" id="foot">
-                    <p>Made with <i class="fas fa-heart" style="color: #E3B413"></i> by <a href="http://w3layouts.com/">QuangNguyen</a></p>
+                    <p>Made with <i class="fas fa-heart" style="color: #E3B413"></i> by <a
+                            href="http://w3layouts.com/">QuangNguyen</a></p>
                 </div>
             </div>
         </div>
@@ -1101,13 +1205,17 @@
     </div>
 
     <script src="js/Home.js"></script>
+    <script src="js/map.js"></script>
     <!--Script -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
     <!--Plugin1-Popularitem-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link href="style/Plugin1-Popular.css" rel="stylesheet" type="text/css">
@@ -1135,7 +1243,7 @@
     <!--Back To Page-->
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
+        window.onscroll = function () {
             scrollFunction()
         };
 
@@ -1158,11 +1266,13 @@
     <script>
         /* Demo purposes only */
         $(".hover").mouseleave(
-            function() {
+            function () {
                 $(this).removeClass("hover");
             }
         );
     </script>
+
+
 </body>
 
 </html>

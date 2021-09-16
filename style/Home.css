@@ -122,7 +122,11 @@
 
 
 /* Làm Menu sổ xuống Jquery */
-
+.focus_hide_or_show {
+    height: 0;
+    width: 0;
+    opacity: 0; 
+}
 .item_menu_cuahang.have-child>.title_cuahang::after {
     display: inline-block;
     width: 0;
@@ -136,8 +140,11 @@
     border-left: .3em solid transparent;
     transition: ease all 0.5s;
     position: absolute;
-    top: 36px;
-    right: 695px;
+    top: 21px;
+    right: -6px;
+}
+.title_cuahang {
+    position: relative;
 }
 
 .title_cuahang {
@@ -161,10 +168,13 @@
     border-left: .3em solid transparent;
     transition: ease all 0.5s;
     position: absolute;
-    top: 36px;
-    right: 777px;
+    top: 21px;
+    right: -6px;
 }
 
+.title_about {
+    position: relative;
+}
 .item_menu_about.have-child.active>.title_about:after {
     transform: rotate(180deg);
 }
@@ -182,8 +192,8 @@
     border-left: .3em solid transparent;
     transition: ease all 0.5s;
     position: absolute;
-    top: 36px;
-    right: 875px;
+    top: 21px;
+    right: -6px;
 }
 
 .title_about {
@@ -194,6 +204,10 @@
     transform: rotate(180deg);
 }
 
+.title_mainmenu {
+    position: relative;
+}
+
 .list_cuahang {
     position: absolute;
     top: 55px;
@@ -202,6 +216,7 @@
     padding: 10px;
     display: none;
     border-radius: 5px;
+    height: 120px;
 }
 
 .list_cuahang a:hover {
@@ -221,6 +236,7 @@
 .login_out {
     display: flex;
     margin-left: 60px;
+    position: relative;
 }
 
 .navbar__link-separator {
@@ -234,10 +250,10 @@
 /* cart gio hang */
 
 .cart_main {
-    position: absolute;
-    right: 428px;
-    top: 22px;
-    width: 33px;
+    position: relative;
+    left: 1%;
+    float: left;
+    top: 8px;
     /* z-index: 99; */
 }
 
@@ -266,7 +282,7 @@
     right: 0px;
     height: 30px;
     width: 300px;
-    background: #607D8B;
+    background: #343a40;
     border: 1px solid #e1e1e1;
     z-index: 99;
 }
@@ -315,6 +331,11 @@
     font-size: 20px;
     color: rgb(248, 244, 244);
 }
+.title_cart_fa {
+    height: 30px;
+    margin-left: 8px;
+    margin-top: 3px;
+}
 
 .title_cart h5 {
     color: black;
@@ -346,6 +367,19 @@
     animation: shake_effect ease 0.6s infinite;
     /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
 }
+.so_luong_gio_hang_fa {
+    position: absolute;
+    right: 117px;
+    top: 6px;
+    color: white;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    background: salmon;
+    text-align: center;
+    font-size: 13px;
+    
+}
 
 @keyframes shake_effect {
     /*Làm hiệu ứng giỏ hàng lắc qua lắc lại*/
@@ -375,6 +409,12 @@
     right: 6px;
     cursor: pointer;
 }
+.trash_fa {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+}
+
 
 
 /* favorite */
@@ -385,3 +425,6 @@
     font-size: 20px;
     padding: 5px 0px 0 44px;
 }
+
+/* MAP */
+
