@@ -200,3 +200,54 @@
 .pagination .btn_page:last-of-type {
     margin: 0 auto 0 6px;
 }
+
+.line_chart {
+    right: -30px;
+    position: absolute;
+    top: 875px;
+}
+
+
+.card {
+        border-radius: 12px;
+        box-shadow: 0 6px 10px -4px rgb(0 0 0 / 15%);
+        background-color: #FFFFFF;
+        color: #252422;
+        margin-bottom: 20px;
+        position: relative;
+        border: 0 none;
+        transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+    }
+.row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+.content {
+        padding: 0 30px 30px;
+        min-height: calc(100vh - px);
+        margin-top: 93px;
+    }
+.card-body {
+        flex: 1 1 auto;
+        padding: 1rem 1rem;
+    }
+.icon-big {
+    font-size: 47px;
+    color: white;
+}
+.card-stats .card-body .numbers {
+    text-align: right;
+    font-size: 2em;
+}
+.card-stats .card-body .numbers .card-category {
+    color: white;
+    font-size: 16px;
+    line-height: 1.4em;
+}   
+.card-stats .card-body .numbers p {
+    margin-bottom: 0;
+}

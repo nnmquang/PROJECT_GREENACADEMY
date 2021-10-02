@@ -380,8 +380,9 @@ $(function() {
           </div>
         </div>
         <div id="ngon1">
-          <figcaption class="figure-caption"><img src="${item_nha_hang.logo}">${item_nha_hang.name}</figcaption>
-          <p style="color: darkorange"><i class="fas fa-star"></i> ${item_nha_hang.vote}</p>
+          <figcaption class="figure-caption"><img src="${item_nha_hang.logo}"></figcaption>
+          <div class="name_restaurant">${item_nha_hang.name}</div>
+          <div class="vote_restaurant"><p style="color: darkorange"><i class="fas fa-star"></i> ${item_nha_hang.vote}</p></div>
         </div>
       </figure>
       <div class="alert ${class_item}" role="alert" id="remain"><a href="#" class="alert-link">${item_nha_hang.type} </a> </div>
@@ -485,6 +486,8 @@ function open_popup_mon_ngon(id_item_mon_ngon) {
 
 
 $(function() {
+    $('#howwork').addClass('animate__tada');
+    
     $('#view_dish').click(function() {
         $('.pop_up_mon_ngon').show('slow');
     });
@@ -597,3 +600,6 @@ $(function() {
 
 
 })
+
+// ANIMATE
+

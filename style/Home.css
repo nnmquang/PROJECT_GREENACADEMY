@@ -38,6 +38,18 @@
     /* làm ẩn popup khi click chuột ra ngoài */
 }
 
+.name_restaurant {
+    position: relative;
+    right: -37px;
+    top: -25px;
+    font-size: 20px;
+}
+.vote_restaurant {
+    top: -22px;
+    position: relative;
+}
+
+
 
 /* Pop-Up-TOPMONNGON */
 
@@ -427,4 +439,43 @@
 }
 
 /* MAP */
+.map_google {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 50px;
+}
+.image_map {
+    max-width: 100px;
+}
+.image_map img {
+   width: 630px;
+   height: 533px;
+}
+.map {
+    position: absolute;
+    right: 12px;
+}
+h1#team-5 {
+    margin-top: 38px;
+}
+@media only screen and (max-width: 500px) {
+	.image_map img {
+	width: 500px;
+    height: 297px;
+}
+    .map {
+        width: 60%;
+    }
+    .map_google {
+        margin-left: 0px;
+    }
+    #addressinput {
+        width: 250px;
+    }
+}
 
+/* ANIMATE */
+#howwork {
+    animation-duration: 3s !important;
+}

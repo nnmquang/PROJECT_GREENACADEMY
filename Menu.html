@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!--Bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS   -->
+    <link href="style/Menu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- HEADER	 -->
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">FoodWagon</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 myNavbar">
+			  <li class="nav-item">
+				<a href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#">Menu</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="#">About</a>
+			  </li>
+			  <!-- <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Dropdown
+				</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <li><a class="dropdown-item" href="#">Action</a></li>
+				  <li><a class="dropdown-item" href="#">Another action</a></li>
+				  <li><hr class="dropdown-divider"></li>
+				  <li><a class="dropdown-item" href="#">Something else here</a></li>
+				</ul>
+			  </li> -->
+			  <!-- <li class="nav-item">
+				<a class="nav-link disabled">Disabled</a>
+			  </li> -->
+			</ul>
+			<form class="d-flex">
+			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
+</div>
+
+<!-- MENU	 -->
+<div class="container main_menu">
+<section id="our_menu" class="pt-5 pb-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="page_title text-center mb-4">
+						<h1>our menu</h1>
+						<div class="single_line"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="nav nav-tabs menu_tab mb-4" id="myTab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="breakfast-tab" data-toggle="tab" href="#breakfast" role="tab">Breakfast</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="lunch-tab" data-toggle="tab" href="#lunch" role="tab">Lunch</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="dinner-tab" data-toggle="tab" href="#dinner" role="tab">Dinner</a>
+					</li>
+					<div class="line"></div>
+				</ul>
+        	</div>
+			<div class="row">
+				<div class="tab-content col-lg-12" id="myTabContent">
+					<div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src="https://i.imgur.com/kbpceNv.jpg" alt="burger">
+									<div class="menu_content">
+										<h4>Chicken Burger  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+									<div class="menu_content">
+										<h4>Black coffee <span>$20</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+									<div class="menu_content">
+										<h4>Fried Rice  <span>$45</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+									<div class="menu_content">
+										<h4>meat  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src="https://i.imgur.com/TAq7lDR.jpg" alt="burger">
+									<div class="menu_content">
+										<h4>Chicken Burger  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="https://i.imgur.com/lYKUORL.jpg" alt="black coffee">
+									<div class="menu_content">
+										<h4>Black coffee <span>$20</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="https://i.imgur.com/AXAHrf6.jpg" alt="fried rice">
+									<div class="menu_content">
+										<h4>Fried Rice  <span>$45</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="https://i.imgur.com/YkDi8Nb.jpg" alt="meat">
+									<div class="menu_content">
+										<h4>meat  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade show" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src="image/Image1.jpg" alt="pizza">
+									<div class="menu_content">
+										<h4>12" Pizza  <span>$35</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/Image2.jpg" alt="salad">
+									<div class="menu_content">
+										<h4>Salad <span>$20</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/Image3.jpg" alt="green tea">
+									<div class="menu_content">
+										<h4>green tea <span>$15</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/Image4.jpg" alt="meat">
+									<div class="menu_content">
+										<h4>meat  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src="image/Image-11.jpg" alt="burger">
+									<div class="menu_content">
+										<h4>Chicken Burger  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/Image-111.jpg" alt="black coffee">
+									<div class="menu_content">
+										<h4>Black coffee <span>$20</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/Image-22.jpg" alt="fried rice">
+									<div class="menu_content">
+										<h4>Fried Rice  <span>$45</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/Image-222.jpg" alt="meat">
+									<div class="menu_content">
+										<h4>meat  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade show" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src="image/c1.png" alt="burger">
+									<div class="menu_content">
+										<h4>Chicken Burger  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/c2.png" alt="black coffee">
+									<div class="menu_content">
+										<h4>Black coffee <span>$20</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/c3.png" alt="fried rice">
+									<div class="menu_content">
+										<h4>Fried Rice  <span>$45</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/c4.png" alt="meat">
+									<div class="menu_content">
+										<h4>meat  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="single_menu">
+									<img src="image/c5.png" alt="burger">
+									<div class="menu_content">
+										<h4>Chicken Burger  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/c6.png" alt="black coffee">
+									<div class="menu_content">
+										<h4>Black coffee <span>$20</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/c7.png" alt="fried rice">
+									<div class="menu_content">
+										<h4>Fried Rice  <span>$45</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+								<div class="single_menu">
+									<img src="image/c8.png" alt="meat">
+									<div class="menu_content">
+										<h4>meat  <span>$24</span></h4>
+										<p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class=" menu_btn btn btn-danger">view more</a>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!--Script -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+<script src="js/Menu.js"></script>
+</body>
+</html>

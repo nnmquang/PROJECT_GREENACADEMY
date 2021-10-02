@@ -58,7 +58,7 @@ color: #161616;
 	padding-top: 50px;
 }
 .figure {
-	margin-right: 10px
+	margin-right: 22px
 }
 #remain, #remain1, #remain2, #remain3, #remain4, #remain5, #remain6, #remain7 {
 	width: 172px ;height: 26px;font-size: 13px; text-align: center; line-height: 2px
@@ -137,7 +137,7 @@ color: #161616;
 	padding-top: 100px;
 	background-image: linear-gradient(to bottom top, #FFCE67 22%, #FDEDCA 0%);
 }
-.figure1 img {
+/* .figure1 img {
 	animation: rotate_kh 2s infinite;
 }
 @keyframes rotate_kh {
@@ -147,7 +147,13 @@ color: #161616;
     to {
         transform: rotateY(180deg)
     }
+} */
+.figure1 img {
+  width: 149px;
+  position: relative;
+  right: -53px;
 }
+
 /*MÓN ĂN ÂU*/
 .pad15 p {
 	font-size: 16px;
@@ -271,7 +277,8 @@ color: #8B8A8A;
 /*NHÀ HÀNG NGON*/
 .figure-caption img {
 	width: 30px;
-	font-weight: bold
+	font-weight: bold;
+  margin-top: 12px;
 }
 .overlay1 {
     position: absolute;

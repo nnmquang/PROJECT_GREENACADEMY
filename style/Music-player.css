@@ -1,0 +1,298 @@
+.player {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+html {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+.dashboard {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    max-width: 480px;
+    padding : 16px 16px 14px;
+    border-bottom: 1px solid #ebeded;
+    text-align: center;
+    z-index: 99;
+    background-color: rgba(117, 142, 170, 0.4);
+    box-shadow: 0 0 1px rgb(117 142 170 / 40%);
+    
+}
+
+.playlist {
+    margin-top: 440px;
+    padding: 12px;
+    box-shadow: 0px 0px 4px rgb(43, 42, 42);
+    width: 480px;
+}
+.cd {
+    max-width: 480px;
+    display: flex;
+    margin: auto;
+    width: 200px;
+
+}
+.cd img {
+    width: 100%;
+    padding-top: 30px;
+    /* border-radius: 300px;
+    width: 144px;
+    height: 144px; */
+}
+
+.thumb {
+    max-width: 480px;
+}
+.thumb img {
+    width: 90px;
+}
+.progress {
+    width: 450px;
+}
+/* PLAYLIST */
+.song {
+    /* display: flex;
+    box-shadow: 0 .5rem 1rem rgba(117, 116, 116, 0.15)!important; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+}
+
+.song.active {
+    background-color:#ec1f55;
+    color: #fff;
+}
+
+.song:active {       /* hieu ung khi kich chuot vao mo de kich vao bai hat mong muon */
+    opacity: 0.8;
+  }
+  
+  .song.active .option,
+  .song.active .author,
+  .song.active .title {
+    color: #fff;
+  }
+
+.song .title {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .song .author {
+    font-size: 15px;
+    color: #999;
+  }
+  
+  .song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+  }
+
+.body {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.option {
+    /* right: -122px; */
+    /* position: relative; */
+    /* margin-left: 90px; */
+    position: absolute;
+    margin-left: 385px;
+
+}
+/* control */
+
+.player .icon-pause {
+    display: none;
+  }
+  
+.player.playing .icon-pause {
+display: inline-block;
+}
+
+.player.playing .icon-play {
+display: none;
+}
+
+/* progess */
+
+#progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    margin-top: 15px;
+  }
+  
+#progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: #ec1f55;
+    cursor: pointer;
+}
+
+.control .btn.active {
+    color: #ec1f55;
+  }
+
+.control .btn-toggle-play {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    background-color: #ec1f55;
+  }
+  .control {
+    margin: 13px;
+}
+
+header h4 {
+    color: #ec1f55;
+    font-size: 20px;
+}
+.font-title {
+    font-family: Poppins;
+}
+
+/* TIME/SECOND */
+.current-time {
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    right: 354px;
+    bottom: -24px;
+  }
+  .duration {
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    left: 12px;
+    bottom: -24px;
+  }
+
+  /*VOLUME */
+  .volume-box {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 295px;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 0 20px;
+  }
+.volume-box.active {            /* phai co thuoc tinh nay thi thanh volume moi an hien khi kich vao */
+    display: block;
+  }
+  .volume-down {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #72646f;
+  }
+
+  .volume-up {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #72646f;
+  }
+  i.fas.fa-redo {
+    margin-left: 11px;
+  }
+  .volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: #ec1f55;
+    cursor: pointer;
+}
+.volume-range {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 15px;
+}
+  
+.cd9-title img {
+  position: absolute;
+  top: 62px;
+  width: 800px;
+  right: 57px;
+}
+.cd9-title h3 {
+  position: absolute;
+  right: 48px;
+  top: 571px;
+  color: #fff;
+}
+.cd-circle img {
+  border-radius: 310px;
+  width: 100px;
+  position: absolute;
+  top: 516px;
+  right: 291px;
+}
+
+
+@-webkit-keyframes xoayvong{
+  from{
+      -webkit-transform:rotate(0deg);
+      -moz-transform:rotate(0deg);
+      -o-transform:rotate(0deg);
+  }
+  to{
+      -webkit-transform:rotate(360deg);
+      -moz-transform:rotate(360deg);
+      -o-transform:rotate(360deg);
+  }
+}
+/* Standard syntax */ 
+@keyframes xoayvong {
+  from{
+      -webkit-transform:rotate(0deg);
+      -moz-transform:rotate(0deg);
+      -o-transform:rotate(0deg);
+  }
+  to{
+      -webkit-transform:rotate(360deg);
+      -moz-transform:rotate(360deg);
+      -o-transform:rotate(360deg);
+  }
+}
+
+/* call animation */
+.cd-circle img {
+  animation: xoayvong 10s linear 0s infinite;
+  -webkit-animation: xoayvong 10s linear 0s infinite;
+  -moz-animation: xoayvong 10s linear 0s infinite;
+  -o-animation: xoayvong 10s linear 0s infinite; 
+}
+

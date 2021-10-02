@@ -29,7 +29,7 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
           </div>
           <ul class="nav nav-pills nav-stacked order item_menu">
               <li><a href=""><i class="fa fa-home fa-fw"></i>Home</a></li>
-              <li><a href=""><i class="fa fa-list-alt fa-fw"></i>Widgets</a></li>
+              <li><a href="./chart2_user.html"><i class="fa fa-list-alt fa-fw"></i>Widgets</a></li>
               <li><a href=""><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
               <li><a href=""><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a></li>
               <li><a href=""><i class="fa fa-table fa-fw"></i>Table</a></li>
@@ -67,15 +67,134 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="ano
           </div> 
       </div>
     </nav>
+    <div class="content">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-body" style="background-color: blueviolet;">
+              <div class="row">
+                <div class="col-5 col-md-4">
+                  <div class="icon-big text-center icon-warning">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                </div>
+                <div class="col-7 col-md-8">
+                  <div class="numbers">
+                    <p class="card-category">Capacity</p>
+                    <p class="card-title">150GB<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer ">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-refresh"></i>
+                Update Now
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-body " style="background-color: darkorange;">
+              <div class="row">
+                <div class="col-5 col-md-4">
+                  <div class="icon-big text-center icon-warning">
+                    <i class="fas fa-coins"></i>
+                  </div>
+                </div>
+                <div class="col-7 col-md-8">
+                  <div class="numbers">
+                    <p class="card-category">Revenue</p>
+                    <p class="card-title">$ 1,345<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer ">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-calendar-o"></i>
+                Last day
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-body" style="background-color: tomato;">
+              <div class="row">
+                <div class="col-5 col-md-4">
+                  <div class="icon-big text-center icon-warning">
+                    <i class="fas fa-bezier-curve"></i>
+                  </div>
+                </div>
+                <div class="col-7 col-md-8">
+                  <div class="numbers">
+                    <p class="card-category">Errors</p>
+                    <p class="card-title">23<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer ">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-clock-o"></i>
+                In the last hour
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="card card-stats">
+            <div class="card-body " style="background-color: deepskyblue;">
+              <div class="row">
+                <div class="col-5 col-md-4">
+                  <div class="icon-big text-center icon-warning">
+                    <i class="far fa-heart"></i>
+                  </div>
+                </div>
+                <div class="col-7 col-md-8">
+                  <div class="numbers">
+                    <p class="card-category">Followers</p>
+                    <p class="card-title">+45K<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer ">
+              <hr>
+              <div class="stats">
+                <i class="fa fa-refresh"></i>
+                Update now
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="">
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <div id="chart_div"></div>
-     
-
     </div>
 
-    </div>
+     <div class="">
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
+     </div>
+
+     <div class="line_chart">
+      <div id="line_chart"></div>
+      <script src="js/google_line_chart.js"></script>
   </div>
+
+  <div class="calendar" style="margin-left: 70px;">
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23B39DDB&ctz=Asia%2FHo_Chi_Minh&hl=en&title=Calendar%20&showNav=1&showPrint=0&showCalendars=1" style="border:solid 1px #777" width="1000" height="500" frameborder="0" scrolling="no"></iframe>
+  </div>
+  
+  </div>
+    </div>
 </div>
 
 

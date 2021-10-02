@@ -149,6 +149,7 @@ $(function() {
     })
 })
 
+// COUNTDOWN
 var deadline = new Date("9/31/2021 23:59:59");
 var x = setInterval(function () {
     var current = new Date();

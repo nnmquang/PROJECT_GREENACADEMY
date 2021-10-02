@@ -46,9 +46,110 @@ function drawColColors() {
         },
         vAxis: {
           title: 'Rating (scale of 1-10)'
-        }
+        },
+        height: 500,
       };
 
       var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
       chart.draw(data, options);
+    }
+
+
+    // PIE-CHART
+
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+          height : 400,
+          width : 600,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+      // LINE-CHART
+
+      google.charts.load('current', {
+        packages: ['corechart', 'line']
+    });
+    google.charts.setOnLoadCallback(drawBasic);
+    
+    var data_real = [
+        [0, 0],
+        [1, 10],
+        [2, 23],
+        [3, 17],
+        [4, 18],
+        [5, 9],
+        [6, 11],
+        [7, 27],
+        [8, 33],
+        [9, 40],
+        [10, 0],
+        [11, 10],
+        [12, 23],
+        [13, 17],
+        [14, 18],
+        [15, 9],
+        [16, 11],
+        [17, 27],
+        [18, 33],
+        [19, 40]
+    ];
+    
+    
+    setInterval(function() {
+    
+        var number = Math.round(Math.random() * 100);
+    
+        var item = [data_real[data_real.length - 1][0] + 1, number];
+    
+        data_real.push(item);
+        data_real.splice(0, 1);
+    
+        console.log(data_real);
+    
+        drawBasic();
+    
+    }, 100);
+    
+    
+    function drawBasic() {
+    
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'X');
+        data.addColumn('number', 'Visitors');
+    
+        data.addRows(data_real);
+    
+        var options = {
+            hAxis: {
+                title: 'Time'
+            },
+            vAxis: {
+                title: 'Popularity'
+            },
+            width :700,
+            height :500,
+        };
+    
+        var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+    
+        chart.draw(data, options);
     }

@@ -116,7 +116,6 @@ function render_detail_cart() { //Tạo 1 function để sử dụng nhiều cas
     $('.list_item_cart').html(html_gio_hang);
 }
 
-
 function calc_all_item_in_cart() { //Tính tổng số lượng phải khai báo thêm biến ở dưới
     var so_luong_gio_hang = 0;
     $.each(ds_gio_hang, function(index, item_gio_hang_hien_tai) {
@@ -181,7 +180,6 @@ function add_cart(id_mon) { // Làm số lượng từng món
 
     calc_all_item_in_cart(); //Tính tổng số lượng phải khai báo thêm biến ở dưới
     render_detail_cart() //Tạo 1 function để sử dụng nhiều case 31-08
-
     // $('.trash').click(function (x) {
     //   var item_cart = x.html_gio_hang
     //   $('.item_cart').empty();
@@ -232,7 +230,7 @@ function decrese_number_quanlity(index_item) {
     });
 
     //console.log(ds_gio_hang);
-    render_detail_cart()
+    render_detail_cart();
     calc_all_item_in_cart();
 }
 
