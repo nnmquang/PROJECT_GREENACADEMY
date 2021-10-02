@@ -28,6 +28,8 @@ html {
     padding: 12px;
     box-shadow: 0px 0px 4px rgb(43, 42, 42);
     width: 480px;
+    overflow: auto;
+    height: 400px;
 }
 .cd {
     max-width: 480px;
@@ -96,19 +98,16 @@ html {
     color: #999;
     font-size: 18px;
   }
+  .song .body {
+    flex: 1;
+    padding: 0 16px;
+}
 
 .body {
     margin-left: 50px;
     margin-top: 20px;
 }
-.option {
-    /* right: -122px; */
-    /* position: relative; */
-    /* margin-left: 90px; */
-    position: absolute;
-    margin-left: 385px;
 
-}
 /* control */
 
 .player .icon-pause {
@@ -296,3 +295,7 @@ header h4 {
   -o-animation: xoayvong 10s linear 0s infinite; 
 }
 
+@media only screen and (max-width: 500px) {
+	.cd9-title, .cd-circle {
+	display: none;}
+}
