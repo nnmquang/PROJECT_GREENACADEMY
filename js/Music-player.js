@@ -211,7 +211,6 @@ const app = {
             // console.log(audio.duration / 100 * e.target.value )
             const seekTime = audio.duration / 100 * e.target.value
             audio.currentTime = seekTime
-
         }
 
         // Khi next song
