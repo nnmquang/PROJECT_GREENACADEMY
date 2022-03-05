@@ -65,7 +65,7 @@
 //     email: 'hungnguyenxuan118@gmail.com'
 // }];
 var list_user = [];
-var cur_page = 0;             
+var cur_page = 0;
 
 var item_tren_trang = 3;
 
@@ -74,9 +74,9 @@ var number_of_page = 0;    //đưa biến ra ngoài thành biến toàn cục m�
 function load_ds_user() {
     var html = '';
 
-     $.each(list_user, function (index, user) { 
+    $.each(list_user, function (index, user) {
         if (index < cur_page * item_tren_trang + item_tren_trang && index >= cur_page * item_tren_trang) {
-          html += `
+            html += `
           <tr>
               <td>
                   <img src="${user.avatar}" alt="">
@@ -94,7 +94,7 @@ function load_ds_user() {
           </tr>
           `;
         }
-     });  
+    });
 
 
     $('.ds_users').html(html);
@@ -107,8 +107,8 @@ function load_pagination() {
 
     var html = '';
     for (var i = 0; i < number_of_page; i++) {
-        if(cur_page == i) {
-           html += `<div class="btn_page active">${i + 1}</div>`         // Active biet trang hien tai mau xanh
+        if (cur_page == i) {
+            html += `<div class="btn_page active">${i + 1}</div>`         // Active biet trang hien tai mau xanh
         } else {
             html += `<div class="btn_page" onclick="pagination(${i})">${i + 1}</div>`;  // Them su kien onclick de di chuyen trang
         }
@@ -190,7 +190,9 @@ function pagination(page_change) {    // Them su kien onclick de di chuyen trang
 }
 
 
-function add_new_user() {             //Add user
+function add_new_user() { 
+    
+    //Add user
     var username = '';
     var fullname = '';
     var emailuser = '';
@@ -199,7 +201,7 @@ function add_new_user() {             //Add user
     var fullname_input = $('#fullname');
     var emailuser_input = $('#emailuser');
 
-    if(username_input.val() != '' && fullname_input.val() != '' && emailuser_input.val() != '') {
+    if (username_input.val() != '' && fullname_input.val() != '' && emailuser_input.val() != '') {
 
         username = username_input.val();
         fullname = fullname_input.val();
@@ -230,91 +232,92 @@ function add_new_user() {             //Add user
 
 }
 
-function pre_check_page() {var temp_data = localStorage.getItem('list_user');
-if (typeof temp_data !== 'undefined' && temp_data !== null) {
-    //console.log('đã có data, nên lấy data ra chứ ko add lần đầu từ server nữa');
+function pre_check_page() {
+    var temp_data = localStorage.getItem('list_user');
+    if (typeof temp_data !== 'undefined' && temp_data !== null) {
+        //console.log('đã có data, nên lấy data ra chứ ko add lần đầu từ server nữa');
 
-    list_user = JSON.parse(temp_data);
+        list_user = JSON.parse(temp_data);
 
-    //console.log(list_user);
-} else { // lay data tu server gan lan dau tien
-    //console.log('chưa có data, nên phải lấy data lần đầu từ server');
+        //console.log(list_user);
+    } else { // lay data tu server gan lan dau tien
+        //console.log('chưa có data, nên phải lấy data lần đầu từ server');
 
-    list_user = [{
-        avatar: 'image/avatar1.png',
-        username: 'hungnguyen',
-        fullname: 'Hùng Nguyễn',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar2.png',
-        username: 'hungnguyen 1',
-        fullname: 'Hùng Nguyễn 1',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar3.png',
-        username: 'hungnguyen 2',
-        fullname: 'Hùng Nguyễn 2',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar4.png',
-        username: 'hungnguyen 3',
-        fullname: 'Hùng Nguyễn 3',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar5.png',
-        username: 'hungnguyen 4',
-        fullname: 'Hùng Nguyễn 4',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar6.png',
-        username: 'hungnguyen 5',
-        fullname: 'Hùng Nguyễn 5',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar7.png',
-        username: 'hungnguyen 6',
-        fullname: 'Hùng Nguyễn 6',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar8.png',
-        username: 'hungnguyen 7',
-        fullname: 'Hùng Nguyễn 7',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar9.png',
-        username: 'hungnguyen 8',
-        fullname: 'Hùng Nguyễn 8',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar10.png',
-        username: 'hungnguyen 9',
-        fullname: 'Hùng Nguyễn 9',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar11.png',
-        username: 'hungnguyen 10',
-        fullname: 'Hùng Nguyễn 10',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar1.png',
-        username: 'hungnguyen 11',
-        fullname: 'Hùng Nguyễn 11',
-        email: 'hungnguyenxuan118@gmail.com'
-    }, {
-        avatar: 'image/avatar2.png',
-        username: 'hungnguyen 12',
-        fullname: 'Hùng Nguyễn 12',
-        email: 'hungnguyenxuan118@gmail.com'
-    }];
+        list_user = [{
+            avatar: 'image/avatar1.png',
+            username: 'hungnguyen',
+            fullname: 'Hùng Nguyễn',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar2.png',
+            username: 'hungnguyen 1',
+            fullname: 'Hùng Nguyễn 1',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar3.png',
+            username: 'hungnguyen 2',
+            fullname: 'Hùng Nguyễn 2',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar4.png',
+            username: 'hungnguyen 3',
+            fullname: 'Hùng Nguyễn 3',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar5.png',
+            username: 'hungnguyen 4',
+            fullname: 'Hùng Nguyễn 4',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar6.png',
+            username: 'hungnguyen 5',
+            fullname: 'Hùng Nguyễn 5',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar7.png',
+            username: 'hungnguyen 6',
+            fullname: 'Hùng Nguyễn 6',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar8.png',
+            username: 'hungnguyen 7',
+            fullname: 'Hùng Nguyễn 7',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar9.png',
+            username: 'hungnguyen 8',
+            fullname: 'Hùng Nguyễn 8',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar10.png',
+            username: 'hungnguyen 9',
+            fullname: 'Hùng Nguyễn 9',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar11.png',
+            username: 'hungnguyen 10',
+            fullname: 'Hùng Nguyễn 10',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar1.png',
+            username: 'hungnguyen 11',
+            fullname: 'Hùng Nguyễn 11',
+            email: 'hungnguyenxuan118@gmail.com'
+        }, {
+            avatar: 'image/avatar2.png',
+            username: 'hungnguyen 12',
+            fullname: 'Hùng Nguyễn 12',
+            email: 'hungnguyenxuan118@gmail.com'
+        }];
 
-    localStorage.setItem('list_user', JSON.stringify(list_user));
+        localStorage.setItem('list_user', JSON.stringify(list_user));
 
-   }
-   number_of_page = Math.ceil(list_user.length / item_tren_trang);    // dem ham xuong duoi moi tinh duoc luc load trag
+    }
+    number_of_page = Math.ceil(list_user.length / item_tren_trang);    // dem ham xuong duoi moi tinh duoc luc load trag
 }
 
 function clear_all_data_input_form(array_item_input) {      //tao function de tu dong xoa popup modal khi user nhap xong
-    $.each(array_item_input, function(index, item_input) {
+    $.each(array_item_input, function (index, item_input) {
         item_input.val('');
     });
 }
@@ -368,19 +371,19 @@ function update_user() {
 function remove_item_user(index_item) {             //Xoa list user trash
     // console.log('remove item index: ' + index_item);
     var confirm_result = confirm(`Bạn muốn xóa user này ra khỏi danh sách không không?`);
-    if(confirm_result) {
+    if (confirm_result) {
         list_user.splice(index_item, 1);
         localStorage.setItem('list_user', JSON.stringify(list_user));
         load_ds_user();
-    
+
         load_pagination();
     } else {
         //do nothing
     }
-    
+
 }
 
-$(function() {
+$(function () {
     pre_check_page()
 
     load_ds_user();
