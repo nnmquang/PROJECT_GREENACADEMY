@@ -300,6 +300,7 @@ function add_cart(id_mon) { // Làm số lượng từng món
 
 
 
+<<<<<<< Updated upstream
 $(function() {
     check_cart();
     check_cart_fa();
@@ -331,6 +332,21 @@ $(function() {
 
         }
     });
+=======
+$(function () {
+
+     $('.title_cart_fa').click(function() {
+         if ($(this).hasClass('.item_cart_favorite')) {
+            $(".cart_is_favorite").css("height", "300px");
+            $(this).addClass();
+            $(".cart_is_favorite").css("overflow", "auto");
+         } else {
+            $(".cart_is_favorite").css("height", "300px");
+            $(this).removeClass();
+            $(".cart_is_favorite").css("overflow", "hidden");
+         }
+     });
+>>>>>>> Stashed changes
 
 
     
